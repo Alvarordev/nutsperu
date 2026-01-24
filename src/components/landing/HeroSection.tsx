@@ -140,7 +140,7 @@ export function HeroSection({ tableImageUrl, macroImages }: HeroSectionProps) {
           </p>
           <div>
             <button
-              className="hidden md:inline-flex items-center justify-center transition-all duration-200 
+              className="hidden md:inline-flex items-center justify-center transition-all duration-200 cursor-pointer
                          focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 
                          disabled:pointer-events-none bg-secondary text-foreground border-2 border-transparent 
                          hover:bg-white hover:border-dark hover:text-foreground group-hover:bg-white 

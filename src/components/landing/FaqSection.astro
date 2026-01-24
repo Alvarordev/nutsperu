@@ -1,0 +1,84 @@
+---
+import { HelpCircle, Truck, RefreshCw, BadgePercent } from "@lucide/astro";
+import StarBadge from "../common/StarBadge.astro";
+import { ArrowUpRight } from "@lucide/astro";
+
+const faqs = [
+  {
+    icon: Truck,
+    subtitle: "Envíos y Cobertura",
+    question: "¿Realizan envíos a provincias?",
+    answer: "Sí, realizamos envíos a todo el Perú. Trabajamos con agencias de transporte confiables para asegurar que tu pedido llegue en perfectas condiciones hasta la puerta de tu negocio.",
+  },
+  {
+    icon: BadgePercent,
+    subtitle: "Ventas Mayoristas",
+    question: "¿Cuál es el pedido mínimo para mayoristas?",
+    answer: "Nuestro pedido mínimo para acceder a precios mayoristas es de 10kg por producto. Ofrecemos escalas de descuento adicionales para volúmenes superiores a 50kg.",
+  },
+  {
+    icon: HelpCircle,
+    subtitle: "Calidad de Producto",
+    question: "¿Cuentan con registro sanitario?",
+    answer: "Absolutamente. Todos nuestros productos cuentan con registro sanitario DIGESA vigente y pasan por rigurosos controles de calidad para garantizar su inocuidad.",
+  },
+  {
+    icon: RefreshCw,
+    subtitle: "Política de Devoluciones",
+    question: "¿Qué hago si tengo un problema con mi pedido?",
+    answer: "Tenemos una política de satisfacción garantizada. Si encuentras algún inconveniente con el producto dentro de las 48 horas de recepción, gestionaremos el cambio inmediato.",
+  }
+];
+---
+
+<section class="bg-primary/5 py-30 px-6 md:px-0 w-full">
+  <div class="max-w-300 mx-auto flex flex-col gap-12">
+    <div class="flex flex-col items-center gap-4 text-center mb-4">
+      <span class="text-background font-bold uppercase tracking-widest text-sm bg-secondary px-4 py-2 rounded-full border border-secondary/20">
+        Información Útil
+      </span>
+      <h2 class="font-title font-black text-4xl md:text-5xl text-foreground uppercase leading-tight">
+        Preguntas Frecuentes
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-0 md:divide-x divide-primary/10 border-t border-primary/10 md:border-t-0 pt-10 md:pt-0">
+      {
+        faqs.map((faq) => (
+          <div class="flex flex-col gap-4 px-4 items-start group cursor-pointer hover:bg-white/40 transition-colors p-6 rounded-2xl md:hover:bg-transparent">
+            <!-- Icon Badge -->
+            <div class="relative w-16 h-16 flex items-center justify-center mb-2">
+              <StarBadge class="w-full h-full absolute inset-0 text-secondary opacity-20 group-hover:opacity-100 transition-opacity duration-300" />
+              <faq.icon 
+                class="relative z-10 w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300"
+                stroke-width={2}
+              />
+            </div>
+            
+            <div class="flex flex-col gap-2 w-full">
+              <!-- Subtitle -->
+              <span class="text-secondary font-bold text-xs md:text-sm flex items-center gap-2 uppercase tracking-wider">
+                {faq.subtitle}
+              </span>
+
+              <!-- Question (Font Title) -->
+              <h3 class="font-title font-black text-xl md:text-2xl text-primary leading-tight min-h-14 flex items-end">
+                {faq.question}
+              </h3>
+
+              <!-- Answer (Font Sans) -->
+              <p class="text-foreground/70 text-sm md:text-base leading-relaxed mt-2 font-sans">
+                {faq.answer}
+              </p>
+
+              <!-- Arrow Decoration -->
+              <div class="mt-4 flex justify-end w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <ArrowUpRight class="w-5 h-5 text-secondary" />
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

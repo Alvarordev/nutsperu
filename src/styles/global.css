@@ -17,7 +17,6 @@
 }
 
 @theme {
-  /* Colores en formato HSL compatible con opacidad */
   --color-background: #FCFAF7;
   --color-foreground: #24211F;
   --color-primary: #542856;
@@ -25,13 +24,12 @@
   --color-accent: hsl(42 97% 54%);
   --color-muted: hsl(35 20% 80%);
   --color-muted-foreground: hsl(294 20% 40%);
+  --color-primary-muted: #EBE1ED;
   --color-border: #161616;
   --color-dark: #161616;
   
-  /* Background Image */
   --image-site-bg: url('../assets/site-background.jpg');
 
-  /* Fuentes */
   --font-sans: "Bespoke Sans", ui-sans-serif, system-ui, sans-serif;
   --font-title: "Excon", sans-serif;
 }

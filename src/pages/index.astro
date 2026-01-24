@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import ProductsSection from "../components/landing/ProductsSection.astro";
 import PartnersSection from "../components/landing/PartnersSection.astro";
 import HowWeWorkSection from "../components/landing/HowWeWorkSection.astro";
+import FaqSection from "../components/landing/FaqSection.astro";
 import { FeaturesSection } from "../components/landing/FeaturesSection";
 import { HeroSection } from "../components/landing/HeroSection";
 import table from "../assets/tabla-gemini.png";
@@ -45,10 +46,10 @@ import pistachoGemini from "../assets/macro-fotos/pistacho-gemini.png";
         <FeaturesSection client:load />
       </div>
     </section>
-    
-    <!-- <PartnersSection /> -->
-    
+
     <ProductsSection />
+    <PartnersSection />
     <HowWeWorkSection />
+    <FaqSection />
   </main>
 </Layout>

@@ -13,19 +13,21 @@ const partners = [
 ];
 ---
 
-<section class="w-full bg-background">
+<section class="w-full bg-background py-20">
   <div>
     <img
       src={texture.src}
       alt="top texture"
       class="w-full translate-y-1.5 rotate-180"
     />
-    <div class="w-full bg-secondary overflow-hidden">
-      <div class="flex justify-center items-center pb-12">
+    <div class="w-full bg-primary overflow-hidden pb-6">
+      <div class="flex justify-center items-center pb-14">
         <h2
-          class="font-black text-balance text-3xl md:text-5xl text-background font-title text-center px-4"
+          class="flex gap-6 items-center font-black text-balance text-3xl md:text-[2.75rem] text-background font-title text-center"
         >
+          <span class="text-2xl inline-block">✦</span>
           Elegidos por tus marcas favoritas
+          <span class="text-2xl inline-block">✦</span>
         </h2>
       </div>
 
@@ -62,6 +64,7 @@ const partners = [
         </div>
       </div>
     </div>
+
     <img
       src={texture.src}
       alt="bottom texture"
@@ -78,7 +81,7 @@ const partners = [
 
   if (container && content) {
     const contentWidth = content.getBoundingClientRect().width;
-    const gap = 64; // gap-16 = 64px
+    const gap = 64;
     const totalWidth = contentWidth + gap;
 
     gsap.to(container, {
