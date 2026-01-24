@@ -136,7 +136,7 @@ export function HeroSection({ tableImageUrl, macroImages }: HeroSectionProps) {
             Seleccionados.
           </h1>
           <p className="text-base md:text-xl font-medium">
-            Frutos secos, semillas y snacks al por mayor <br /> en todo Lima.
+            Frutos secos, semillas y snacks al por mayor <br /> en todo el Perú.
           </p>
           <div>
             <button

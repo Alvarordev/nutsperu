@@ -3,7 +3,6 @@ import logo from "../../assets/logo-white.png";
 import {
   Facebook,
   Instagram,
-  Linkedin,
   Mail,
   MapPin,
   Phone,
@@ -14,23 +13,27 @@ const currentYear = new Date().getFullYear();
 const socialLinks = [
   { icon: Facebook, href: "#", label: "Facebook" },
   { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
 ];
 
 const contactInfo = [
   {
     icon: Mail,
     label: "Correo",
-    text: "contacto@nutsperu.com",
-    href: "mailto:contacto@nutsperu.com",
+    text: "ventas.nusperusac@gmail.com",
+    href: "mailto:ventas.nusperusac@gmail.com",
+  },
+  {
+    icon: MapPin,
+    label: "Ubicación",
+    text: "Proveedores Unidos 290, Lima",
+    href: null,
   },
   {
     icon: Phone,
     label: "Teléfono",
-    text: "+51 999 999 999",
-    href: "tel:+51999999999",
+    text: "+51 956 903 670",
+    href: "tel:+51956903670",
   },
-  { icon: MapPin, label: "Ubicación", text: "Lima, Perú", href: null },
 ];
 ---
 
@@ -103,7 +106,7 @@ const contactInfo = [
       <h3 class="font-title font-bold text-xl mb-6 text-background">
         Contáctanos
       </h3>
-      <div class="grid sm:grid-cols-2 gap-4">
+      <div class="grid gap-4">
         {
           contactInfo.map((info) => (
             <div class="flex items-center gap-4 group">
