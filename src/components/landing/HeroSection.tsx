@@ -156,7 +156,13 @@ export function HeroSection({ tableImageUrl, macroImages }: HeroSectionProps) {
           <img
             src={tableImageUrl}
             alt=""
-            className="h-68 pt-4 md:h-110 rotate-330 top-26 block md:absolute right-0 drop-shadow-[8px_8px_12px_rgba(0,0,0,0.3)]"
+            className="h-68 pt-4 md:h-110 top-26 block md:absolute right-0 drop-shadow-[8px_8px_12px_rgba(0,0,0,0.3)]"
+            style={{
+              transform: `rotate(330deg) translate(${
+                mousePosition.x * 0.01 * -1
+              }px, ${mousePosition.y * 0.01 * -1}px)`,
+              transition: "transform 0.2s ease-out",
+            }}
           />
         </div>
       </div>

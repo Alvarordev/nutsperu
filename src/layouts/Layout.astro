@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/common/Header.astro";
 import Footer from "../components/common/Footer.astro";
+import FloatingWhatsApp from "../components/common/FloatingWhatsApp.astro";
 
 interface Props {
   title?: string;
@@ -38,6 +39,8 @@ const ogImageURL = new URL("/og-logo.png", Astro.site || Astro.url);
     <Header />
     <slot />
     <Footer />
+    
+    <FloatingWhatsApp />
   </body>
 </html>
 
