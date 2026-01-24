@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import texture from "../../assets/texture.png";
 
 interface HeroSectionProps {
   tableImageUrl: string;
@@ -104,7 +105,6 @@ export function HeroSection({ tableImageUrl, macroImages }: HeroSectionProps) {
       ref={sectionRef}
       className="relative flex flex-col w-full overflow-hidden text-background bg-primary"
     >
-      {/* Floating Images */}
       {floatingImages.map((image) => (
         <div
           key={image.id}
@@ -162,11 +162,7 @@ export function HeroSection({ tableImageUrl, macroImages }: HeroSectionProps) {
       </div>
 
       <div className="w-full bg-background">
-        <img
-          src="/src/assets/texture.png"
-          alt="texture"
-          className="-translate-y-0.5"
-        />
+        <img src={texture.src} alt="texture" className="-translate-y-0.5" />
       </div>
     </section>
   );
