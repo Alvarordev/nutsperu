@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import logo from "../../assets/logo-white.png";
 import Button from "./Button.astro";
 import { ChevronDown } from "@lucide/astro";
@@ -12,12 +11,12 @@ const navItems = [
 ---
 
 <header
-  class="w-full z-50 bg-secondary"
+  class="w-full z-50 bg-secondary px-6 md:px-0"
 >
   <div class="flex items-center justify-between max-w-360 w-full mx-auto lg:px-10 py-3">
     <a href="/" class="flex items-center">
-      <Image
-        src={logo}
+      <img
+        src={logo.src}
         alt="Nuts Peru Logo"
         class="h-16 w-auto object-contain"
       />

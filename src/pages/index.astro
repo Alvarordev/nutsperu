@@ -6,7 +6,7 @@ import Button from "../components/common/Button.astro";
 import table from "../assets/tabla-gemini.png";
 import texture from "../assets/texture.png";
 import starBadge from "../assets/star-badge.svg";
-import { Award, Gem, Handshake, Nut } from "@lucide/astro";
+import { Award, Handshake, Nut } from "@lucide/astro";
 ---
 
 <Layout title="Nuts Peru">
@@ -14,27 +14,27 @@ import { Award, Gem, Handshake, Nut } from "@lucide/astro";
     <section
       class="flex flex-col w-full overflow-hidden text-background bg-secondary"
     >
-      <div class="relative flex max-w-7xl mx-auto pb-12 w-full">
-        <div class="max-w-4xl text-left flex flex-col gap-4 pt-38">
+      <div class="relative flex flex-col md:flex-row max-w-7xl mx-auto pb-12 w-full px-6 md:px-0">
+        <div class="max-w-4xl text-left flex flex-col gap-4 pt-18 md:pt-38">
           <h1
-            class="text-[60px] md:text-[4.5rem] font-black leading-[1.1] font-title"
+            class="text-[44px] md:text-[4.5rem] font-black leading-[1.1] font-title"
           >
             Recien Tostados,<br />
             Cuidadosamente<br />
             Seleccionados.
           </h1>
-          <p class="text-[24px] md:text-xl font-medium">
+          <p class="text-base md:text-xl font-medium">
             Frutos secos, semillas y snacks al por mayor <br /> en todo Lima.
           </p>
           <div>
-            <Button variant="primary" size="lg"> Cotiza tu pedido </Button>
+            <Button variant="primary" size="lg" class="hidden! md:block!"> Cotiza tu pedido </Button>
           </div>
         </div>
-        <div class="relative w-full">
+        <div class="relative flex items-center justify-center w-full">
           <img
             src={table.src}
             alt=""
-            class="h-110 rotate-330 top-26 absolute right-0 drop-shadow-[8px_8px_12px_rgba(0,0,0,0.3)]"
+            class="h-68 pt-4 md:h-110 rotate-330 top-26 block md:absolute right-0 drop-shadow-[8px_8px_12px_rgba(0,0,0,0.3)]"
           />
         </div>
       </div>
@@ -43,32 +43,32 @@ import { Award, Gem, Handshake, Nut } from "@lucide/astro";
       </div>
     </section>
 
-    <section class="bg-background py-30">
+    <section class="bg-background py-30 px-6 md:px-0">
       <div class="flex flex-col w-full items-center container mx-auto">
-        <h2 class="font-title font-black text-5xl text-foreground">
+        <h2 class="font-title font-black text-3xl md:text-5xl text-foreground">
           Somos Nuts Perú
         </h2>
         <p
-          class="text-foreground text-center mt-6 text-lg md:text-xl font-medium"
+          class="text-foreground text-center text-balance mt-6 text-base md:text-xl font-medium"
         >
           En Nuts Perú, nos dedicamos a ofrecer frutos secos y snacks saludables
           de la más alta calidad al por mayor. Nuestra pasión por la excelencia
           y el compromiso con la salud nos impulsa a seleccionar cuidadosamente
           cada producto que ofrecemos.
         </p>
-        <div class="flex flex-wrap gap-10 justify-center mt-22">
+        <div class="flex flex-wrap gap-10 justify-center mt-14 md:mt-22">
           <div
             class="bg-white text-foreground flex flex-col flex-[1_1_0%] py-6.25 px-7.5 rounded-2xl shadow-md"
           >
             <div
-              class="relative h-24 w-24 bg-center bg-contain bg-no-repeat flex items-center justify-center"
+              class="relative h-20 w-20 md:h-24 md:w-24 bg-center bg-contain bg-no-repeat flex items-center justify-center"
               style={`background-image: url(${starBadge.src})`}
             >
-              <Award class="h-12 w-12 text-background" stroke-width={2} />
+              <Award class="h-8 w-8 md:h-12 md:w-12 text-background" stroke-width={2} />
             </div>
 
             <div class="flex flex-col mt-4">
-              <h3 class="font-title font-black text-2xl">
+              <h3 class="font-title font-black text-xl md:text-2xl">
                 Mas de 15 años de experiencia
               </h3>
               <p class="mt-5 text-base md:text-lg font-normal">
@@ -84,14 +84,14 @@ import { Award, Gem, Handshake, Nut } from "@lucide/astro";
             class="bg-white text-foreground flex flex-col flex-[1_1_0%] py-6.25 px-7.5 rounded-2xl shadow-md"
           >
             <div
-              class="relative h-24 w-24 bg-center bg-contain bg-no-repeat flex items-center justify-center"
+              class="relative h-20 w-20 md:h-24 md:w-24 bg-center bg-contain bg-no-repeat flex items-center justify-center"
               style={`background-image: url(${starBadge.src})`}
             >
-              <Nut class="h-12 w-12 text-background" stroke-width={2} />
+              <Nut class="h-8 w-8 md:h-12 md:w-12 text-background" stroke-width={2} />
             </div>
 
             <div class="flex flex-col mt-4">
-              <h3 class="font-title font-black text-2xl">
+              <h3 class="font-title font-black text-xl md:text-2xl">
                 Compromiso con la calidad
               </h3>
               <p class="mt-5 text-base md:text-lg font-normal">
@@ -107,14 +107,14 @@ import { Award, Gem, Handshake, Nut } from "@lucide/astro";
             class="bg-white text-foreground flex flex-col flex-[1_1_0%] py-6.25 px-7.5 rounded-2xl shadow-md"
           >
             <div
-              class="relative h-24 w-24 bg-center bg-contain bg-no-repeat flex items-center justify-center"
+              class="relative h-20 w-20 md:h-24 md:w-24 bg-center bg-contain bg-no-repeat flex items-center justify-center"
               style={`background-image: url(${starBadge.src})`}
             >
-              <Handshake class="h-12 w-12 text-background" stroke-width={2} />
+              <Handshake class="h-8 w-8 md:h-12 md:w-12 text-background" stroke-width={2} />
             </div>
 
             <div class="flex flex-col mt-4">
-              <h3 class="font-title font-black text-2xl">
+              <h3 class="font-title font-black text-xl md:text-2xl">
                 Servicio al cliente excepcional
               </h3>
               <p class="mt-5 text-base md:text-lg font-normal">
