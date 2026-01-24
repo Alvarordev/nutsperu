@@ -126,9 +126,9 @@ export function HeroSection({ tableImageUrl, macroImages }: HeroSectionProps) {
         </div>
       ))}
 
-      <div className="relative flex flex-col md:flex-row max-w-7xl mx-auto pb-12 w-full px-6 md:px-0 z-10">
-        <div className="max-w-4xl text-left flex flex-col gap-4 pt-18 md:pt-38">
-          <h1 className="text-[44px] md:text-[5rem] font-black leading-[1.1] font-title">
+      <div className="relative flex flex-col md:flex-row max-w-7xl mx-auto pb-6 w-full px-6 md:px-0 z-10">
+        <div className="max-w-4xl text-left flex flex-col gap-4 pt-18 md:pt-32 px-10 2xl:px-0">
+          <h1 className="text-[44px] lg:text-6xl xl:text-[4.5rem] font-black leading-[1.1] font-title">
             Recien Tostados,
             <br />
             Cuidadosamente
@@ -138,11 +138,12 @@ export function HeroSection({ tableImageUrl, macroImages }: HeroSectionProps) {
           <p className="text-base md:text-xl font-medium">
             Frutos secos, semillas y snacks al por mayor <br /> en todo el Perú.
           </p>
-          <div>
+          <div className="pt-4">
             <button
               className="hidden md:inline-flex items-center justify-center transition-all duration-200 cursor-pointer
                          focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 
-                         disabled:pointer-events-none bg-secondary text-foreground border-2 border-transparent 
+                         disabled:pointer-events-none bg-secondary text-foreground border-2 border-transparent
+                         hover:scale-105
                          hover:bg-white hover:border-dark hover:text-foreground group-hover:bg-white 
                          group-hover:border-dark group-hover:text-primary focus:ring-primary 
                          shadow-[-4px_4px_0px_0px_var(--color-dark)] px-8 py-2 text-lg rounded-full font-bold"
@@ -152,11 +153,12 @@ export function HeroSection({ tableImageUrl, macroImages }: HeroSectionProps) {
             </button>
           </div>
         </div>
+
         <div className="relative flex items-center justify-center w-full">
           <img
             src={tableImageUrl}
-            alt=""
-            className="h-68 pt-4 md:h-110 top-26 block md:absolute right-0 drop-shadow-[8px_8px_12px_rgba(0,0,0,0.3)]"
+            alt="table image"
+            className="h-68 pt-4 md:h-110 top-26 block md:absolute right-10 2xl:right-0 drop-shadow-[8px_8px_12px_rgba(0,0,0,0.3)]"
             style={{
               transform: `rotate(330deg) translate(${
                 mousePosition.x * 0.01 * -1
