@@ -1,0 +1,54 @@
+---
+interface Props {
+  id?: string;
+  href?: string;
+  variant?: "primary" | "secondary" | "outline";
+  size?: "sm" | "md" | "lg";
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+  class?: string;
+}
+
+const {
+  id = "",
+  href,
+  variant = "primary",
+  size = "md",
+  type = "button",
+  disabled = false,
+  class: className = "",
+  ...rest
+} = Astro.props;
+
+const baseStyles =
+  "inline-flex items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
+
+const variants = {
+  primary:
+    "bg-primary text-white border-2 border-transparent hover:bg-white hover:border-dark hover:text-primary group-hover:bg-white group-hover:border-dark group-hover:text-primary focus:ring-primary shadow-[-4px_4px_0px_0px_var(--color-dark)]",
+  secondary:
+    "bg-accent text-primary border-2 border-transparent hover:bg-white hover:border-dark hover:text-primary group-hover:bg-white group-hover:border-dark group-hover:text-primary focus:ring-accent shadow-[-4px_4px_0px_0px_var(--color-dark)]",
+  outline:
+    "border-2 border-primary text-primary hover:bg-primary/10 group-hover:bg-primary/10 focus:ring-primary",
+};
+
+const sizes = {
+  sm: "px-4 py-2 text-sm rounded-full font-medium",
+  md: "px-6 py-3 text-base rounded-full font-medium ",
+  lg: "px-8 py-4 text-lg rounded-full font-bold",
+};
+
+const Element = href ? "a" : "button";
+---
+
+{
+  Element === "a" ? (
+    <a href={href} class:list={[baseStyles, variants[variant], sizes[size], className]} {...rest}>
+      <slot />
+    </a>
+  ) : (
+    <button id={id} type={type} disabled={disabled} class:list={[baseStyles, variants[variant], sizes[size], className]} {...rest}>
+      <slot />
+    </button>
+  )
+}

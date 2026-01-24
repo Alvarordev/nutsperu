@@ -1,0 +1,95 @@
+---
+import floraYFauna from "../../assets/partners/flora-y-fauna.png";
+import laPeregrina from "../../assets/partners/la-peregrina.png";
+import vivanda from "../../assets/partners/vivanda.png";
+import whyNut from "../../assets/partners/why-nut.webp";
+import texture from "../../assets/texture.png";
+import starBadge from "../../assets/star-badge.svg";
+
+const partners = [
+  { name: "Flora y Fauna", logo: floraYFauna, offset: "" },
+  { name: "La Peregrina", logo: laPeregrina, offset: "" },
+  { name: "Vivanda", logo: vivanda, offset: "pb-4" },
+  { name: "Why Nut", logo: whyNut, offset: "" },
+];
+---
+
+<section class="w-full bg-background">
+  <div>
+    <img
+      src={texture.src}
+      alt="top texture"
+      class="w-full translate-y-1.5 rotate-180"
+    />
+    <div class="w-full bg-secondary overflow-hidden">
+      <div class="flex justify-center items-center pb-12">
+        <h2
+          class="font-black text-3xl md:text-5xl text-background font-title text-center px-4"
+        >
+          Elegidos por tus marcas favoritas
+        </h2>
+      </div>
+
+      <div class="relative w-full overflow-hidden">
+        <div class="marquee-container flex gap-16">
+          <div class="marquee-content flex gap-16 items-center justify-center">
+            {
+              partners.map((partner) => (
+                <div class="shrink-0 w-60 h-auto flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:opacity-100">
+                  <img
+                    src={partner.logo.src}
+                    alt={partner.name}
+                    class={`w-full h-full object-contain ${partner.offset}`}
+                  />
+                </div>
+              ))
+            }
+          </div>
+          {
+            Array.from({ length: 3 }).map(() => (
+              <div class="marquee-content flex gap-16 items-center justify-center">
+                {partners.map((partner) => (
+                  <div class="shrink-0 w-60 h-auto flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:opacity-100">
+                    <img
+                      src={partner.logo.src}
+                      alt={partner.name}
+                      class={`w-full h-full object-contain ${partner.offset}`}
+                    />
+                  </div>
+                ))}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    <img
+      src={texture.src}
+      alt="bottom texture"
+      class="w-full -translate-y-0.5"
+    />
+  </div>
+</section>
+
+<script>
+  import gsap from "gsap";
+
+  const container = document.querySelector(".marquee-container");
+  const content = document.querySelector(".marquee-content");
+
+  if (container && content) {
+    const contentWidth = content.getBoundingClientRect().width;
+    const gap = 64; // gap-16 = 64px
+    const totalWidth = contentWidth + gap;
+
+    gsap.to(container, {
+      x: -totalWidth,
+      duration: 15,
+      ease: "none",
+      repeat: -1,
+      modifiers: {
+        x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
+      },
+    });
+  }
+</script>

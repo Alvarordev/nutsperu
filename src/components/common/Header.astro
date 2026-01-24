@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../assets/logo-white.png";
+import Button from "./Button.astro";
+import { ChevronDown } from "@lucide/astro";
+
+const navItems = [
+  { name: "Nuestros Productos", href: "/productos" },
+  { name: "Sobre Nosotros", href: "/nosotros" },
+  { name: "Contacto", href: "/contacto" },
+];
+---
+
+<header
+  class="w-full z-50 bg-secondary"
+>
+  <div class="flex items-center justify-between max-w-360 w-full mx-auto lg:px-10 py-3">
+    <a href="/" class="flex items-center">
+      <Image
+        src={logo}
+        alt="Nuts Peru Logo"
+        class="h-16 w-auto object-contain"
+      />
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class="flex items-center text-[17px] text-background transition-colors font-medium leading-tight"
+          >
+            {item.name}
+            {item.name === "Nuestros Productos" ? (
+              <ChevronDown class="h-5 w-5 ml-1 mt-1"/>
+            ) : null}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center">
+      <Button variant="primary"> Cotizar </Button>
+    </div>
+  </div>
+</header>
