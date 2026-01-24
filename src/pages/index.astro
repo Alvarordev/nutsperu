@@ -2,46 +2,31 @@
 import Layout from "../layouts/Layout.astro";
 import ProductsSection from "../components/landing/ProductsSection.astro";
 import PartnersSection from "../components/landing/PartnersSection.astro";
-import Button from "../components/common/Button.astro";
+import HowWeWorkSection from "../components/landing/HowWeWorkSection.astro";
+import { FeaturesSection } from "../components/landing/FeaturesSection";
+import { HeroSection } from "../components/landing/HeroSection";
 import table from "../assets/tabla-gemini.png";
-import texture from "../assets/texture.png";
 import starBadge from "../assets/star-badge.svg";
-import { Award, Handshake, Nut } from "@lucide/astro";
+import almendraGemini from "../assets/macro-fotos/almendra-gemini.png";
+import maniGemini from "../assets/macro-fotos/mani-gemini.png";
+import nuezBrasilGemini from "../assets/macro-fotos/nuez-brasil-gemini.png";
+import nuezNogalGemini from "../assets/macro-fotos/nuez-nogal-gemini.png";
+import pistachoGemini from "../assets/macro-fotos/pistacho-gemini.png";
 ---
 
 <Layout title="Nuts Peru">
   <main class="relative w-full">
-    <section
-      class="flex flex-col w-full overflow-hidden text-background bg-secondary"
-    >
-      <div class="relative flex flex-col md:flex-row max-w-7xl mx-auto pb-12 w-full px-6 md:px-0">
-        <div class="max-w-4xl text-left flex flex-col gap-4 pt-18 md:pt-38">
-          <h1
-            class="text-[44px] md:text-[4.5rem] font-black leading-[1.1] font-title"
-          >
-            Recien Tostados,<br />
-            Cuidadosamente<br />
-            Seleccionados.
-          </h1>
-          <p class="text-base md:text-xl font-medium">
-            Frutos secos, semillas y snacks al por mayor <br /> en todo Lima.
-          </p>
-          <div>
-            <Button variant="primary" size="lg" class="hidden! md:block!"> Cotiza tu pedido </Button>
-          </div>
-        </div>
-        <div class="relative flex items-center justify-center w-full">
-          <img
-            src={table.src}
-            alt=""
-            class="h-68 pt-4 md:h-110 rotate-330 top-26 block md:absolute right-0 drop-shadow-[8px_8px_12px_rgba(0,0,0,0.3)]"
-          />
-        </div>
-      </div>
-      <div class="w-full bg-background">
-        <img src={texture.src} alt="texture" class="-translate-y-0.5" />
-      </div>
-    </section>
+    <HeroSection
+      client:load
+      tableImageUrl={table.src}
+      macroImages={{
+        almendra: almendraGemini.src,
+        mani: maniGemini.src,
+        nuezBrasil: nuezBrasilGemini.src,
+        nuezNogal: nuezNogalGemini.src,
+        pistacho: pistachoGemini.src,
+      }}
+    />
 
     <section class="bg-background py-30 px-6 md:px-0">
       <div class="flex flex-col w-full items-center container mx-auto">
@@ -56,79 +41,14 @@ import { Award, Handshake, Nut } from "@lucide/astro";
           y el compromiso con la salud nos impulsa a seleccionar cuidadosamente
           cada producto que ofrecemos.
         </p>
-        <div class="flex flex-wrap gap-10 justify-center mt-14 md:mt-22">
-          <div
-            class="bg-white text-foreground flex flex-col flex-[1_1_0%] py-6.25 px-7.5 rounded-2xl shadow-md"
-          >
-            <div
-              class="relative h-20 w-20 md:h-24 md:w-24 bg-center bg-contain bg-no-repeat flex items-center justify-center"
-              style={`background-image: url(${starBadge.src})`}
-            >
-              <Award class="h-8 w-8 md:h-12 md:w-12 text-background" stroke-width={2} />
-            </div>
 
-            <div class="flex flex-col mt-4">
-              <h3 class="font-title font-black text-xl md:text-2xl">
-                Mas de 15 años de experiencia
-              </h3>
-              <p class="mt-5 text-base md:text-lg font-normal">
-                Por más de 15 años, hemos sido líderes en la distribución de
-                frutos secos y snacks saludables en Lima. Nuestra experiencia
-                nos permite entender las necesidades de nuestros clientes y
-                ofrecer soluciones personalizadas.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="bg-white text-foreground flex flex-col flex-[1_1_0%] py-6.25 px-7.5 rounded-2xl shadow-md"
-          >
-            <div
-              class="relative h-20 w-20 md:h-24 md:w-24 bg-center bg-contain bg-no-repeat flex items-center justify-center"
-              style={`background-image: url(${starBadge.src})`}
-            >
-              <Nut class="h-8 w-8 md:h-12 md:w-12 text-background" stroke-width={2} />
-            </div>
-
-            <div class="flex flex-col mt-4">
-              <h3 class="font-title font-black text-xl md:text-2xl">
-                Compromiso con la calidad
-              </h3>
-              <p class="mt-5 text-base md:text-lg font-normal">
-                Nos enorgullece ofrecer productos que cumplen con los más altos
-                estándares de calidad. Cada lote de frutos secos y snacks es
-                cuidadosamente inspeccionado para garantizar frescura, sabor y
-                valor nutricional.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="bg-white text-foreground flex flex-col flex-[1_1_0%] py-6.25 px-7.5 rounded-2xl shadow-md"
-          >
-            <div
-              class="relative h-20 w-20 md:h-24 md:w-24 bg-center bg-contain bg-no-repeat flex items-center justify-center"
-              style={`background-image: url(${starBadge.src})`}
-            >
-              <Handshake class="h-8 w-8 md:h-12 md:w-12 text-background" stroke-width={2} />
-            </div>
-
-            <div class="flex flex-col mt-4">
-              <h3 class="font-title font-black text-xl md:text-2xl">
-                Servicio al cliente excepcional
-              </h3>
-              <p class="mt-5 text-base md:text-lg font-normal">
-                En Nuts Perú, valoramos a nuestros clientes y nos esforzamos por
-                brindar un servicio excepcional. Nuestro equipo está siempre
-                disponible para ayudarle a encontrar los productos adecuados y
-                responder a sus preguntas.
-              </p>
-            </div>
-          </div>
-        </div>
+        <FeaturesSection client:load />
       </div>
     </section>
-    <PartnersSection />
+    
+    <!-- <PartnersSection /> -->
+    
     <ProductsSection />
+    <HowWeWorkSection />
   </main>
 </Layout>

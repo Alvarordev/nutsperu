@@ -18,10 +18,10 @@
 
 @theme {
   /* Colores en formato HSL compatible con opacidad */
-  --color-background: #F9F8F1;
-  --color-foreground: hsl(349 15% 27%);
-  --color-primary: #742C7D;
-  --color-secondary: #345230;
+  --color-background: #FCFAF7;
+  --color-foreground: #24211F;
+  --color-primary: #542856;
+  --color-secondary: #9BC53D;
   --color-accent: hsl(42 97% 54%);
   --color-muted: hsl(35 20% 80%);
   --color-muted-foreground: hsl(294 20% 40%);
