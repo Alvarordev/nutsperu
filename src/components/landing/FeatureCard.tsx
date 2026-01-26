@@ -25,8 +25,8 @@ export function FeatureCard({
         transition-all duration-300 ease-out
         ${
           isSelected
-            ? "bg-accent shadow-xl flex-[1.1_1_0%] py-10 px-8 min-h-115 md:scale-105 z-10"
-            : "bg-white shadow-md hover:shadow-lg flex-[1_1_0%] py-6 px-6 min-h-100 scale-100 z-0"
+            ? "bg-accent shadow-xl w-full md:w-auto md:flex-[1.1_1_0%] py-8 px-6 md:py-10 md:px-8 min-h-auto md:min-h-115 md:scale-105 z-10"
+            : "bg-white shadow-md hover:shadow-lg w-full md:w-auto md:flex-[1_1_0%] py-6 px-6 min-h-auto md:min-h-100 scale-100 z-0"
         }
       `}
     >

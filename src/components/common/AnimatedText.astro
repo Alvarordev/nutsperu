@@ -1,0 +1,87 @@
+---
+interface Props {
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div";
+  class?: string;
+  duration?: number;
+  manual?: boolean;
+}
+
+const {
+  as: Tag = "p",
+  class: className,
+  duration = 1.2,
+  manual = false,
+} = Astro.props;
+---
+
+<Tag
+  class:list={["animated-paragraph", className]}
+  data-duration={duration}
+  data-manual={manual ? "true" : "false"}
+>
+  <slot />
+</Tag>
+
+<style is:global>
+  .animated-paragraph {
+    opacity: 0;
+  }
+
+  .animated-paragraph.is-ready {
+    opacity: 1;
+  }
+
+  .line-wrapper {
+    overflow: hidden;
+    display: block;
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import SplitType from "split-type";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const initAnimations = () => {
+    const paragraphs = document.querySelectorAll(".animated-paragraph");
+
+    paragraphs.forEach((p) => {
+      const duration = parseFloat((p as HTMLElement).dataset.duration || "0.8");
+
+      const split = new SplitType(p as HTMLElement, {
+        types: "lines",
+        lineClass: "split-line",
+      });
+
+      split.lines?.forEach((line) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "line-wrapper";
+        line.parentNode?.insertBefore(wrapper, line);
+        wrapper.appendChild(line);
+      });
+
+      p.classList.add("is-ready");
+
+      if ((p as HTMLElement).dataset.manual === "true") return;
+
+      gsap.from(split.lines, {
+        scrollTrigger: {
+          trigger: p,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+        yPercent: 100,
+        opacity: 0,
+        duration: duration,
+        stagger: 0.1,
+        ease: "expo.out",
+      });
+    });
+  };
+
+  initAnimations();
+
+  document.addEventListener("astro:page-load", initAnimations);
+</script>

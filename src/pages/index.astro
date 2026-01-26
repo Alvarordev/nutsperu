@@ -5,7 +5,7 @@ import PartnersSection from "../components/landing/PartnersSection.astro";
 import HowWeWorkSection from "../components/landing/HowWeWorkSection.astro";
 import FaqSection from "../components/landing/FaqSection.astro";
 import { FeaturesSection } from "../components/landing/FeaturesSection";
-import { HeroSection } from "../components/landing/HeroSection";
+import HeroSection from "../components/landing/HeroSection.astro";
 import table from "../assets/tabla-gemini.webp";
 import almendraGemini from "../assets/macro-fotos/almendra-gemini.png";
 import maniGemini from "../assets/macro-fotos/mani-gemini.png";
@@ -17,7 +17,6 @@ import pistachoGemini from "../assets/macro-fotos/pistacho-gemini.png";
 <Layout title="Nuts Peru">
   <main class="relative w-full">
     <HeroSection
-      client:load
       tableImageUrl={table.src}
       macroImages={{
         almendra: almendraGemini.src,
@@ -34,12 +33,12 @@ import pistachoGemini from "../assets/macro-fotos/pistacho-gemini.png";
           Somos Nuts Perú
         </h2>
         <p
-          class="text-foreground text-center text-balance mt-6 text-base md:text-xl font-medium"
+          class="text-foreground text-center mt-6 text-base md:text-xl font-medium text-balance"
         >
           En Nuts Perú, nos dedicamos a ofrecer frutos secos y snacks saludables
           de la más alta calidad al por mayor. Nuestra pasión por la excelencia
           y el compromiso con la salud nos impulsa a seleccionar cuidadosamente
-          cada producto que ofrecemos.
+          <br class="md:hidden" /> cada producto que ofrecemos.
         </p>
 
         <FeaturesSection client:load />

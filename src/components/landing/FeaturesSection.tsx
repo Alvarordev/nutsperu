@@ -34,7 +34,7 @@ export function FeaturesSection() {
   };
 
   return (
-    <div className="flex flex-wrap gap-6 md:gap-10 justify-center items-center mt-12 md:mt-18 max-w-300 mx-auto">
+    <div className="flex flex-col md:flex-row gap-6 md:gap-10 justify-center items-center mt-12 md:mt-18 max-w-300 mx-auto w-full">
       {features.map((feature) => (
         <FeatureCard
           key={feature.id}
