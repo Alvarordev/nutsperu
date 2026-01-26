@@ -2,7 +2,6 @@
 import { ArrowRight } from "@lucide/astro";
 import texture from "../../assets/texture.png";
 import { FloatingNuts, ParallaxTable } from "./HeroInteractive";
-import AnimatedText from "../common/AnimatedText.astro";
 import Button from "../common/Button.astro";
 
 interface Props {
@@ -26,13 +25,13 @@ const { tableImageUrl, macroImages } = Astro.props;
   <FloatingNuts client:load images={macroImages} />
 
   <div
-    class="relative flex flex-col md:flex-row max-w-7xl mx-auto pb-2 md:pb-6 h-full [@media(min-height:900px)]:pb-18 w-full px-4 md:px-0 z-10"
+    class="relative flex flex-col md:flex-row max-w-7xl mx-auto pb-2 md:pb-6 h-full [@media(min-width:1440px)_and_(min-height:900px)]:pb-18 w-full px-4 md:px-0 z-10"
   >
     <div
-      class="max-w-4xl text-left flex flex-col gap-4 pt-18 md:pt-32 px-0 md:px-10 2xl:px-0"
+      class="order-2 md:order-1 max-w-4xl text-left flex flex-col gap-4 pt-10 md:pt-8 lg:pt-32 px-0 md:px-10 2xl:px-0"
     >
       <h1
-        class="text-[2.7rem] lg:text-6xl xl:text-[4.5rem] font-black leading-[1.1] font-title"
+        class="text-[2.55rem] lg:text-6xl xl:text-[4.5rem] font-black leading-[1.1] font-title"
       >
         Recien Tostados,
         <br />
@@ -44,22 +43,17 @@ const { tableImageUrl, macroImages } = Astro.props;
         Frutos secos, semillas y snacks al por mayor <br /> en todo el Perú.
       </p>
       <div class="pt-4">
-        <Button size="lg" class="py-2! hidden! md:flex!">
+        <Button size="lg" class="py-2!">
           Cotiza tu pedido
           <ArrowRight class="size-5 ml-2" stroke-width={3} />
         </Button>
       </div>
     </div>
 
-    <div class="relative flex items-center justify-center w-full">
+    <div
+      class="order-1 md:order-2 relative flex items-center justify-center w-full pt-14 md:pt-0"
+    >
       <ParallaxTable client:load src={tableImageUrl} />
-    </div>
-
-    <div class="w-full pt-10 md:hidden">
-      <Button size="lg" class="py-2! w-full!">
-        Cotiza tu pedido
-        <ArrowRight class="size-5 ml-2" stroke-width={3} />
-      </Button>
     </div>
   </div>
 
