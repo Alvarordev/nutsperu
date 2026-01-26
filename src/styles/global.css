@@ -17,14 +17,14 @@
 }
 
 @theme {
-  --color-background: #FCFAF7;
-  --color-foreground: #24211F;
-  --color-primary: #542856;
-  --color-secondary: #9BC53D;
+  --color-background: hsl(35 49% 98%);
+  --color-foreground: hsl(24 7% 13%);
+  --color-primary: hsl(297 37% 25%);
+  --color-secondary: hsl(79 54% 51%);
   --color-accent: hsl(42 97% 54%);
   --color-muted: hsl(35 20% 80%);
   --color-muted-foreground: hsl(294 20% 40%);
-  --color-primary-muted: #EBE1ED;
+  --color-primary-muted: hsl(290 25% 91%);
   --color-border: #161616;
   --color-dark: #161616;
   
