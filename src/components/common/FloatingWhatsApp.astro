@@ -1,11 +1,79 @@
 ---
 import Button from "./Button.astro";
 import whatsappIcon from "../../assets/whatsapp-svg.svg";
+
+interface Props {
+  triggerId?: string;
+}
+
+const { triggerId = "hero-section" } = Astro.props;
 ---
 
-<div class="fixed bottom-6 right-6 z-50">
-  <Button href="https://wa.me/51956903670" variant="primary" size="md" class="flex items-center gap-2 px-5! py-3!">
-    <img src={whatsappIcon.src} alt="WhatsApp" class="w-6 h-6" />
-    Podemos Ayudarte?
-  </Button>
+<div
+  id="floating-whatsapp"
+  class="fixed bottom-8 right-0 md:right-6 z-50 pointer-events-none"
+  data-trigger={triggerId}
+>
+  <div class="overflow-hidden">
+    <div class="whatsapp-button-wrapper translate-y-full p-2">
+      <Button
+        href="https://wa.me/51956903670"
+        variant="primary"
+        size="md"
+        class="flex items-center gap-2 px-5! py-3!"
+      >
+        <img src={whatsappIcon.src} alt="WhatsApp" class="w-6 h-6" />
+        Podemos Ayudarte?
+      </Button>
+    </div>
+  </div>
 </div>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const initFloatingWhatsApp = () => {
+    const menu = document.querySelector<HTMLElement>("#floating-whatsapp");
+    const wrapper = menu?.querySelector(".whatsapp-button-wrapper");
+    const triggerId = menu?.dataset.trigger;
+
+    const trigger = triggerId ? document.querySelector(`#${triggerId}`) : null;
+
+    if (!menu || !wrapper) return;
+
+    if (!trigger) {
+      gsap.set(wrapper, { y: 0 });
+      menu.style.pointerEvents = "auto";
+      return;
+    }
+
+    const tl = gsap.timeline({
+      paused: true,
+      defaults: { ease: "power4.out", duration: 0.5 },
+    });
+
+    tl.to(wrapper, {
+      y: 0,
+    });
+
+    ScrollTrigger.create({
+      trigger: trigger,
+      start: "bottom top",
+      onEnter: () => {
+        tl.play();
+        menu.style.pointerEvents = "auto";
+      },
+      onLeaveBack: () => {
+        tl.reverse();
+        menu.style.pointerEvents = "none";
+      },
+    });
+  };
+
+  initFloatingWhatsApp();
+
+  document.addEventListener("astro:after-swap", initFloatingWhatsApp);
+</script>

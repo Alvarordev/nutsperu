@@ -4,7 +4,6 @@ import ProductsSection from "../components/landing/ProductsSection.astro";
 import PartnersSection from "../components/landing/PartnersSection.astro";
 import HowWeWorkSection from "../components/landing/HowWeWorkSection.astro";
 import FaqSection from "../components/landing/FaqSection.astro";
-import { FeaturesSection } from "../components/landing/FeaturesSection";
 import HeroSection from "../components/landing/HeroSection.astro";
 import table from "../assets/tabla-gemini.webp";
 import almendraGemini from "../assets/macro-fotos/almendra-gemini.png";
@@ -12,6 +11,7 @@ import maniGemini from "../assets/macro-fotos/mani-gemini.png";
 import nuezBrasilGemini from "../assets/macro-fotos/nuez-brasil-gemini.png";
 import nuezNogalGemini from "../assets/macro-fotos/nuez-nogal-gemini.png";
 import pistachoGemini from "../assets/macro-fotos/pistacho-gemini.png";
+import AboutSection from "../components/landing/AboutSection.astro";
 ---
 
 <Layout title="Nuts Peru">
@@ -27,24 +27,7 @@ import pistachoGemini from "../assets/macro-fotos/pistacho-gemini.png";
       }}
     />
 
-    <section class="bg-background py-30 px-6 md:px-0">
-      <div class="flex flex-col w-full items-center container mx-auto">
-        <h2 class="font-title font-black text-3xl md:text-5xl text-foreground">
-          Somos Nuts Perú
-        </h2>
-        <p
-          class="text-foreground text-center mt-6 text-base md:text-xl font-medium text-balance"
-        >
-          En Nuts Perú, nos dedicamos a ofrecer frutos secos y snacks saludables
-          de la más alta calidad al por mayor. Nuestra pasión por la excelencia
-          y el compromiso con la salud nos impulsa a seleccionar cuidadosamente
-          <br class="md:hidden" /> cada producto que ofrecemos.
-        </p>
-
-        <FeaturesSection client:load />
-      </div>
-    </section>
-
+    <AboutSection />
     <ProductsSection />
     <PartnersSection />
     <HowWeWorkSection />

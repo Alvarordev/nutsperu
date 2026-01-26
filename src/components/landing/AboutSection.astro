@@ -1,0 +1,21 @@
+---
+import { FeaturesSection } from "./FeaturesSection";
+---
+
+<section class="bg-background py-20 px-4 md:px-0">
+  <div class="flex flex-col w-full md:items-center container mx-auto">
+    <h2 class="font-title font-black text-4xl md:text-5xl text-foreground">
+      Somos Nuts Perú
+    </h2>
+    <p
+      class="text-foreground md:text-center mt-3 md:mt-6 text-lg md:text-xl font-normal text-balance"
+    >
+      En Nuts Perú, nos dedicamos a ofrecer frutos secos y snacks saludables de
+      la más alta calidad al por mayor. Nuestra pasión por la excelencia y el
+      compromiso con la salud nos impulsa a seleccionar cuidadosamente
+      <br class="md:hidden" /> cada producto que ofrecemos.
+    </p>
+
+    <FeaturesSection client:load />
+  </div>
+</section>
