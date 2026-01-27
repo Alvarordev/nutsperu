@@ -1,40 +1,12 @@
 ---
-import maniCenital from "../../assets/productos/mani/mani-cenital-gemini.png";
-import nuezCaju from "../../assets/productos/nuez-caju/nuez-caju-cenital.png";
-import pistacho from "../../assets/productos/pistacho/pistacho-cenital.png";
-import linaza from "../../assets/productos/linaza/linaza-cenital.png";
-import granola from "../../assets/productos/granola/granola-cenital.png";
-import almendras from "../../assets/productos/almendra/almendras-cenital.png";
-import anis from "../../assets/productos/anis/anis-cenital.png";
-import nuezBrasil from "../../assets/productos/nuez-brasil/nuez-brasil-cenital.png";
-import arandano from "../../assets/productos/arandano/arandano-cenital.png";
-import damasco from "../../assets/productos/damasco/damasco-cenital.png";
-import calabaza from "../../assets/productos/calabaza/calabaza-cenital.png";
-import guindones from "../../assets/productos/guindon/guindones-cenital.png";
 import Button from "../common/Button.astro";
-
-const products = [
-  { name: "Maní", image: maniCenital },
-  { name: "Pistachos", image: pistacho },
-  { name: "Arándanos", image: arandano },
-  { name: "Semillas", image: calabaza },
-  { name: "Almendras", image: almendras },
-  { name: "Damascos", image: damasco },
-  { name: "Nuez de Brasil", image: nuezBrasil },
-  { name: "Granola", image: granola },
-  { name: "Nuez de Cajú", image: nuezCaju },
-  { name: "Guindones", image: guindones },
-  { name: "Linaza", image: linaza },
-  { name: "Anís", image: anis },
-];
+import { products } from "../../data/products";
 ---
 
 <section class="py-20 bg-background px-4 md:px-0">
   <div>
     <div class="md:text-center mb-16">
-      <h2
-        class="text-4xl md:text-5xl font-black text-foreground font-title"
-      >
+      <h2 class="text-4xl md:text-5xl font-black text-foreground font-title">
         Nuestros Productos
       </h2>
       <p
@@ -49,18 +21,18 @@ const products = [
       class="grid grid-cols-2 md:grid-cols-4 gap-x-0 md:gap-x-6 gap-y-8 md:gap-y-12 max-w-300 mx-auto"
     >
       {
-        products.map((product) => (
-          <div class="flex flex-col items-center group cursor-pointer">
+        products.slice(0, 12).map((product) => (
+          <a href={`/productos/${product.slug}`} class="flex flex-col items-center group cursor-pointer">
             <div class="aspect-square w-full max-w-36 lg:max-w-50 mb-2 transition-transform duration-300 group-hover:scale-110">
               <img
-                src={product.image.src}
+                src={product.images[0].src}
                 alt={product.name}
                 class="w-full h-full object-contain drop-shadow-xl"
               />
             </div>
 
             <h3 class="text-center text-xl md:text-2xl font-bold font-title text-foreground mb-4">
-              {product.name}
+              {product.name.split(' ')[0]}
             </h3>
 
             <div class="relative transition-transform duration-300">
@@ -71,7 +43,7 @@ const products = [
                 Ver Producto
               </Button>
             </div>
-          </div>
+          </a>
         ))
       }
     </div>

@@ -1,0 +1,38 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { products } from "../../data/products";
+import ProductsFilter from "../../components/productos/ProductsFilter";
+
+const url = new URL(Astro.request.url);
+const searchParam = url.searchParams.get("search") || "";
+const categoriesParam = url.searchParams.get("categories") || "";
+const initialCategories = categoriesParam ? categoriesParam.split(",") : [];
+---
+
+<Layout>
+  <main class="w-full min-h-screen bg-background">
+    <section class="bg-primary py-20">
+      <div class="flex w-full max-w-300 mx-auto">
+        <div class="text-background max-w-200">
+          <h1 class="font-title font-black text-5xl">Nuestros Productos</h1>
+          <p class="mt-6 text-xl font-normal">
+            Garantiza la excelencia de tu producción con nuestra selección
+            premium de insumos. Ofrecemos abastecimiento continuo y consistencia
+            en cada lote, asegurando que tus productos finales mantengan siempre
+            el más alto estándar del mercado.
+          </p>
+        </div>
+
+        <div></div>
+      </div>
+    </section>
+    <section class="py-20">
+      <ProductsFilter
+        products={products}
+        initialSearch={searchParam}
+        initialCategories={initialCategories}
+        client:load
+      />
+    </section>
+  </main>
+</Layout>
