@@ -1,9 +1,9 @@
 import ManiCenital from "../assets/productos/mani/mani-cenital-gemini.png";
-import ManiEmpaque from "../assets/productos/mani/mani-empaque.jpg";
-import ManiPartido from "../assets/productos/mani/mani-partido.jpg";
-import ManiEntero from "../assets/productos/mani/mani-entero.jpg";
-import ManiEnGranela from "../assets/productos/mani/mani-en-granela.jpg";
-import ManiConCascara from "../assets/productos/mani/mani-con-cascara.jpg";
+import ManiEmpaque from "../assets/productos/mani/mani-empaque.webp";
+import ManiPartido from "../assets/productos/mani/mani-partido.webp";
+import ManiEntero from "../assets/productos/mani/mani-entero.webp";
+import ManiEnGranela from "../assets/productos/mani/mani-en-granela.webp";
+import ManiConCascara from "../assets/productos/mani/mani-con-cascara.webp";
 import NuezCajuCenital from "../assets/productos/nuez-caju/nuez-caju-cenital.png";
 import NuezCajuEmpaque from "../assets/productos/nuez-caju/nuez-caju-empaque.jpg";
 import NuezCaju from "../assets/productos/nuez-caju/nuez-caju.jpg";
@@ -14,11 +14,11 @@ import GranolaCenital from "../assets/productos/granola/granola-cenital.png";
 import GranolaEmpaque from "../assets/productos/granola/granola-empaque.jpg";
 import GranolaEntero from "../assets/productos/granola/granola-entero.jpg";
 import ArandanoCenital from "../assets/productos/arandano/arandano-cenital.png";
-import ArandanoEmpaque from "../assets/productos/arandano/arandano-empaque.jpg";
-import ArandanoEntero from "../assets/productos/arandano/arandano-entero.jpg";
+import ArandanoEmpaque from "../assets/productos/arandano/arandano-empaque.webp";
+import ArandanoEntero from "../assets/productos/arandano/arandanos-entero.webp";
 import CalabazaCenital from "../assets/productos/calabaza/calabaza-cenital.png";
-import CalabazaEmpaque from "../assets/productos/calabaza/calabaza-empaque.jpg";
-import CalabazaEntero from "../assets/productos/calabaza/calabaza-entero.jpg";
+import CalabazaEmpaque from "../assets/productos/calabaza/calabaza-empaque.webp";
+import CalabazaEntero from "../assets/productos/calabaza/calabaza-entero.webp";
 import DamascoCenital from "../assets/productos/damasco/damasco-cenital.png";
 import DamascoEmpaque from "../assets/productos/damasco/damasco-empaque.jpg";
 import DamascoEntero from "../assets/productos/damasco/damasco-entero.jpg";
@@ -26,19 +26,45 @@ import PasasRubiasCenital from "../assets/productos/pasas-rubias/pasas-rubias-ce
 import PasasRubiasEmpaque from "../assets/productos/pasas-rubias/pasas-rubias-empaque.jpg";
 import PasasRubiasEntero from "../assets/productos/pasas-rubias/pasas-rubias-entero.jpg";
 import AjonjoliCenital from "../assets/productos/ajonjoli/ajonjoli-cenital.png";
+import AjonjoliEmpaque from "../assets/productos/ajonjoli/ajonjoli-empaque.webp";
+import AjonjoliEntero from "../assets/productos/ajonjoli/ajonjoli-entero.webp";
 import NuezNogalCenital from "../assets/productos/nuez-nogal/nuez-nogal-cenital.png";
+import NuezNogalEmpaque from "../assets/productos/nuez-nogal/nuez-nogal-empaque.webp";
+import NuezNogalEntero from "../assets/productos/nuez-nogal/nuez-nogal-entero.webp";
+import NuezNogalPartido from "../assets/productos/nuez-nogal/nuez-nogal-partido.webp";
 import NuezBrasilCenital from "../assets/productos/nuez-brasil/nuez-brasil-cenital.png";
+import NuezBrasilEmpaque from "../assets/productos/nuez-brasil/nuez-brasil-empaque.webp";
+import NuezBrasilEntero from "../assets/productos/nuez-brasil/nuez-brasil-entero.webp";
+import NuezBrasilPartido from "../assets/productos/nuez-brasil/nuez-brasil-partido.webp";
+import NuezBrasilHojuelas from "../assets/productos/nuez-brasil/nuez-brasil-hojuelas.webp";
+import NuezBrasilTrozado from "../assets/productos/nuez-brasil/nuez-brasil-trozado.webp";
 import LinazaCenital from "../assets/productos/linaza/linaza-cenital.png";
+import LinazaEmpaque from "../assets/productos/linaza/linaza-empaque.webp";
+import LinazaEntero from "../assets/productos/linaza/linaza-entero.webp";
 import GuindonCenital from "../assets/productos/guindon/guindones-cenital.png";
+import GuindonEntero from "../assets/productos/guindon/guindones-entero.webp";
 import FrutaConfitadaCenital from "../assets/productos/fruta-confitada/fruta-confitada-cenital.png";
+import FrutaConfitadaEmpaque from "../assets/productos/fruta-confitada/fruta-confitada-empaque.webp";
+import FrutaConfitadaRoja from "../assets/productos/fruta-confitada/fruta-confitada-roja.webp";
+import FrutaConfitadaVerde from "../assets/productos/fruta-confitada/fruta-confitada-verde.webp";
 import ChiaCenital from "../assets/productos/chia/chia-cenital.png";
+import ChiaEmpaque from "../assets/productos/chia/chia-empaque.webp";
+import ChiaEntero from "../assets/productos/chia/chia-entero.webp";
 import AnisCenital from "../assets/productos/anis/anis-cenital.png";
 import AlmendraCenital from "../assets/productos/almendra/almendras-cenital.png";
+import AlmendrasEmpaque from "../assets/productos/almendra/almendras-empaque.webp";
+import AlmendrasEntero from "../assets/productos/almendra/almendras-entero.webp";
+import AlmendrasHojuelas from "../assets/productos/almendra/almendras-hojuelas.webp";
+import AlmendrasPartidas from "../assets/productos/almendra/almendras-partido.webp";
+import AlmendrasPartidoPolvo from "../assets/productos/almendra/almendras-partido-polvo.webp";
+import AlmendrasPolvo from "../assets/productos/almendra/almendras-polvo.webp";
 import AvellanasCenital from "../assets/productos/avellanas/avellanas-cenital.png";
 import CanelaCenital from "../assets/productos/canela/canela-cenital.png";
 import CocoCenital from "../assets/productos/coco/coco-cenital.png";
 import HigosCenital from "../assets/productos/higos/higos-cenital.png";
 import PasasCenital from "../assets/productos/pasas/pasas-cenital.png";
+import PasasEmpaque from "../assets/productos/pasas/pasas-empaque.webp";
+import PasasEntero from "../assets/productos/pasas/pasas-entero.webp";
 
 export const products = [
   {
@@ -107,8 +133,25 @@ export const products = [
     category: "nueces",
     description:
       "Nuestras almendras son una fuente rica en nutrientes, perfectas para un snack saludable o como adición crujiente a ensaladas y otros platillos.",
-    images: [{ id: "cenital", src: AlmendraCenital.src }],
-    presentations: [{ label: "Entero", id: "entero" }],
+    images: [
+      { id: "cenital", src: AlmendraCenital.src },
+      { id: "empaque", src: AlmendrasEmpaque.src },
+      { id: "entero", src: AlmendrasEntero.src },
+      {
+        id: "hojuelas",
+        src: AlmendrasHojuelas.src,
+      },
+      { id: "partido", src: AlmendrasPartidas.src },
+      { id: "partido-polvo", src: AlmendrasPartidoPolvo.src },
+      { id: "polvo", src: AlmendrasPolvo.src },
+    ],
+    presentations: [
+      { label: "Entero", id: "entero" },
+      { label: "Hojuelas", id: "hojuelas" },
+      { label: "Partido", id: "partido" },
+      { label: "Partido con Polvo", id: "partido-polvo" },
+      { label: "Polvo", id: "polvo" },
+    ],
   },
   {
     name: "Damasco Deshidratado",
@@ -129,8 +172,20 @@ export const products = [
     category: "nueces",
     description:
       "Nuestra nuez brasilera es una fuente rica en nutrientes, perfecta para un snack saludable o como adición crujiente a ensaladas y otros platillos.",
-    images: [{ id: "cenital", src: NuezBrasilCenital.src }],
-    presentations: [{ label: "Entero", id: "entero" }],
+    images: [
+      { id: "cenital", src: NuezBrasilCenital.src },
+      { id: "empaque", src: NuezBrasilEmpaque.src },
+      { id: "entero", src: NuezBrasilEntero.src },
+      { id: "partido", src: NuezBrasilPartido.src },
+      { id: "hojuelas", src: NuezBrasilHojuelas.src },
+      { id: "trozado", src: NuezBrasilTrozado.src },
+    ],
+    presentations: [
+      { label: "Entero", id: "entero" },
+      { label: "Partido", id: "partido" },
+      { label: "Hojuelas", id: "hojuelas" },
+      { label: "Trozado", id: "trozado" },
+    ],
   },
   {
     name: "Granola",
@@ -164,7 +219,10 @@ export const products = [
     category: "deshidratados",
     description:
       "Nuestros guindones son dulces y jugosos, perfectos para disfrutar como snack saludable o para añadir un toque especial a tus recetas favoritas.",
-    images: [{ id: "cenital", src: GuindonCenital.src }],
+    images: [
+      { id: "cenital", src: GuindonCenital.src },
+      { id: "entero", src: GuindonEntero.src },
+    ],
     presentations: [{ label: "Entero", id: "entero" }],
   },
   {
@@ -173,7 +231,11 @@ export const products = [
     category: "semillas",
     description:
       "Nuestra linaza es de alta calidad, ideal para realzar el sabor y la textura de una variedad de platillos en la cocina diaria.",
-    images: [{ id: "cenital", src: LinazaCenital.src }],
+    images: [
+      { id: "cenital", src: LinazaCenital.src },
+      { id: "empaque", src: LinazaEmpaque.src },
+      { id: "entero", src: LinazaEntero.src },
+    ],
     presentations: [{ label: "Entero", id: "entero" }],
   },
   {
@@ -204,7 +266,11 @@ export const products = [
     category: "semillas",
     description:
       "Nuestro ajonjolí es de alta calidad, ideal para realzar el sabor y la textura de una variedad de platillos en la cocina diaria.",
-    images: [{ id: "cenital", src: AjonjoliCenital.src }],
+    images: [
+      { id: "cenital", src: AjonjoliCenital.src },
+      { id: "empaque", src: AjonjoliEmpaque.src },
+      { id: "entero", src: AjonjoliEntero.src },
+    ],
     presentations: [{ label: "Entero", id: "entero" }],
   },
   {
@@ -213,8 +279,16 @@ export const products = [
     category: "nueces",
     description:
       "Nuestra nuez de nogal es seleccionada cuidadosamente para ofrecer un producto fresco y delicioso, ideal para consumo directo o como ingrediente en diversas recetas.",
-    images: [{ id: "cenital", src: NuezNogalCenital.src }],
-    presentations: [{ label: "Entero", id: "entero" }],
+    images: [
+      { id: "cenital", src: NuezNogalCenital.src },
+      { id: "empaque", src: NuezNogalEmpaque.src },
+      { id: "entero", src: NuezNogalEntero.src },
+      { id: "partido", src: NuezNogalPartido.src },
+    ],
+    presentations: [
+      { label: "Entero", id: "entero" },
+      { label: "Partido", id: "partido" },
+    ],
   },
   {
     name: "Pasas",
@@ -222,7 +296,7 @@ export const products = [
     category: "deshidratados",
     description:
       "Nuestras pasas son dulces y jugosas, perfectas para disfrutar como snack saludable o para añadir un toque especial a tus recetas favoritas.",
-    images: [{ id: "cenital", src: PasasCenital.src }],
+    images: [{ id: "cenital", src: PasasCenital.src }, { id: "empaque", src: PasasEmpaque.src }, { id: "entero", src: PasasEntero.src }],
     presentations: [{ label: "Entero", id: "entero" }],
   },
   {
@@ -231,8 +305,16 @@ export const products = [
     category: "confitado",
     description:
       "Nuestra fruta confitada es dulce y llena de sabor, ideal para consumir como snack o para incorporar en diversas recetas culinarias.",
-    images: [{ id: "cenital", src: FrutaConfitadaCenital.src }],
-    presentations: [{ label: "Entero", id: "entero" }],
+    images: [
+      { id: "cenital", src: FrutaConfitadaCenital.src },
+      { id: "empaque", src: FrutaConfitadaEmpaque.src },
+      { id: "roja", src: FrutaConfitadaRoja.src },
+      { id: "verde", src: FrutaConfitadaVerde.src },
+    ],
+    presentations: [
+      { label: "Roja", id: "roja" },
+      { label: "Verde", id: "verde" },
+    ],
   },
   {
     name: "Chía",
@@ -240,7 +322,7 @@ export const products = [
     category: "semillas",
     description:
       "Nuestra chía es de alta calidad, ideal para realzar el sabor y la textura de una variedad de platillos en la cocina diaria.",
-    images: [{ id: "cenital", src: ChiaCenital.src }],
+    images: [{ id: "cenital", src: ChiaCenital.src }, { id: "empaque", src: ChiaEmpaque.src }, { id: "entero", src: ChiaEntero.src }],
     presentations: [{ label: "Entero", id: "entero" }],
   },
   {
