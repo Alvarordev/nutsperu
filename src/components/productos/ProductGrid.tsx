@@ -8,14 +8,14 @@ interface ProductGridProps {
 export default function ProductGrid({ products }: ProductGridProps) {
   if (products.length === 0) {
     return (
-      <div className="ml-10 flex items-center justify-center min-h-96">
-        <p className="text-2xl text-foreground/60">No se encontraron productos</p>
+      <div className="lg:ml-10 flex items-center justify-center min-h-96">
+        <p className="text-lg md:text-xl lg:text-2xl text-foreground/60">No se encontraron productos</p>
       </div>
     );
   }
 
   return (
-    <div className="ml-10 grid grid-cols-4 gap-8 justify-between">
+    <div className="lg:ml-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8 justify-between">
       {products.map((product) => (
         <a
           key={product.slug}
@@ -30,7 +30,7 @@ export default function ProductGrid({ products }: ProductGridProps) {
             />
           </div>
 
-          <h3 className="text-start px-4 text-xl font-bold font-title text-foreground mb-4">
+          <h3 className="text-start px-4 text-lg md:text-xl font-bold font-title text-foreground mb-4">
             {product.name}
           </h3>
 

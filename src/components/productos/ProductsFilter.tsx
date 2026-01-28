@@ -54,8 +54,8 @@ export default function ProductsFilter({ products }: ProductsFilterProps) {
   };
 
   return (
-    <div className="flex w-full max-w-300 mx-auto">
-      <div className="flex flex-col gap-4">
+    <div className="flex flex-col lg:flex-row w-full max-w-300 mx-auto px-4 lg:px-0">
+      <div className="flex flex-col gap-4 mb-8 lg:mb-0">
         <SearchFilter
           initialValue={searchQuery}
           onSearchChange={handleSearchChange}

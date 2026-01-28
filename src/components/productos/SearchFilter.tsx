@@ -22,7 +22,7 @@ export default function SearchFilter({ initialValue = "", onSearchChange }: Sear
   return (
     <div className="flex flex-col gap-4">
       <p className="font-bold text-lg">Filtro por nombre</p>
-      <div className="flex w-60 h-10 border border-foreground py-2 px-3 rounded-full items-center">
+      <div className="flex w-full lg:w-60 h-10 border border-foreground py-2 px-3 rounded-full items-center">
         <input
           type="text"
           placeholder="Buscar por nombre"
