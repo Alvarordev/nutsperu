@@ -1,6 +1,6 @@
 ---
 import logo from "../../assets/logo-white.png";
-import { ChevronDown } from "@lucide/astro";
+import { ChevronDown, Menu, X } from "@lucide/astro";
 import ProductsDropdown from "./ProductsDropdown.astro";
 import type { Category } from "../../types/product";
 
@@ -19,7 +19,7 @@ const categories: Category[] = [
 ];
 ---
 
-<header class="bg-primary w-full z-50 px-4 md:px-0">
+<header class="bg-primary w-full z-50 px-4 md:px-0 relative">
   <div
     class="flex items-center justify-between max-w-360 w-full mx-auto lg:px-10 py-4"
   >
@@ -52,9 +52,128 @@ const categories: Category[] = [
             >
               {item.name}
             </a>
-          )
+          ),
         )
       }
     </nav>
+
+    <button
+      id="mobile-menu-button"
+      class="md:hidden text-background p-2 hover:bg-primary-muted hover:text-foreground rounded-lg transition-colors"
+      aria-label="Toggle menu"
+    >
+      <Menu class="h-6 w-6" id="menu-icon" />
+      <X class="h-6 w-6 hidden" id="close-icon" />
+    </button>
   </div>
+
+  <nav
+    id="mobile-menu"
+    class="md:hidden absolute top-full left-0 right-0 bg-primary-muted overflow-hidden"
+    style="height: 0;"
+  >
+    <div class="px-4 py-6 space-y-4">
+      {
+        navItems.map((item) =>
+          item.name === "Nuestros Productos" ? (
+            <div class="space-y-2">
+              <button class="mobile-products-toggle w-full flex items-center justify-between text-lg text-foreground font-bold py-3 px-4 rounded-lg hover:bg-primary transition-colors">
+                <span>{item.name}</span>
+                <ChevronDown class="h-5 w-5 transition-transform duration-300" />
+              </button>
+              <div class="mobile-products-dropdown hidden">
+                <div class="bg-background rounded-lg py-4 px-7 mt-2">
+                  {categories.map((category, index) => (
+                    <a
+                      href={`/productos?category=${category}`}
+                      class={`text-sm block font-bold text-foreground ${index === categories.length - 1 ? "" : "border-b border-foreground"} py-4 hover:bg-primary-muted transition-colors capitalize`}
+                    >
+                      {category}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <a
+              href={item.href}
+              class="block text-lg text-foreground font-bold py-3 px-4 rounded-lg hover:bg-primary transition-colors"
+            >
+              {item.name}
+            </a>
+          ),
+        )
+      }
+    </div>
+  </nav>
 </header>
+
+<script>
+  const menuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+  let isOpen = false;
+
+  menuButton?.addEventListener("click", () => {
+    isOpen = !isOpen;
+
+    if (isOpen) {
+      menuIcon?.classList.add("hidden");
+      closeIcon?.classList.remove("hidden");
+
+      const menuContent = mobileMenu?.querySelector("div");
+      const fullHeight = menuContent?.scrollHeight || 0;
+
+      if (mobileMenu) {
+        mobileMenu.style.transition = "height 0.3s ease";
+        mobileMenu.style.height = `${fullHeight}px`;
+      }
+    } else {
+      menuIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
+
+      if (mobileMenu) {
+        mobileMenu.style.transition = "height 0.3s ease";
+        mobileMenu.style.height = "0";
+      }
+    }
+  });
+
+  const mobileLinks = mobileMenu?.querySelectorAll("a");
+  mobileLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      isOpen = false;
+      menuIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
+      if (mobileMenu) {
+        mobileMenu.style.height = "0";
+      }
+    });
+  });
+
+  const productsToggle = document.querySelector(".mobile-products-toggle");
+  const productsDropdown = document.querySelector(".mobile-products-dropdown");
+  let productsOpen = false;
+
+  productsToggle?.addEventListener("click", () => {
+    productsOpen = !productsOpen;
+    const chevron = productsToggle.querySelector("svg");
+
+    if (productsOpen) {
+      productsDropdown?.classList.remove("hidden");
+      chevron?.style.setProperty("transform", "rotate(180deg)");
+    } else {
+      productsDropdown?.classList.add("hidden");
+      chevron?.style.setProperty("transform", "rotate(0deg)");
+    }
+
+    setTimeout(() => {
+      const menuContent = mobileMenu?.querySelector("div");
+      const fullHeight = menuContent?.scrollHeight || 0;
+      if (mobileMenu) {
+        mobileMenu.style.height = `${fullHeight}px`;
+      }
+    }, 10);
+  });
+</script>

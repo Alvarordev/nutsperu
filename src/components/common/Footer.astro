@@ -1,12 +1,6 @@
 ---
 import logo from "../../assets/logo-white.png";
-import {
-  Facebook,
-  Instagram,
-  Mail,
-  MapPin,
-  Phone,
-} from "@lucide/astro";
+import { Facebook, Instagram, Mail, MapPin, Phone } from "@lucide/astro";
 
 const currentYear = new Date().getFullYear();
 
@@ -138,16 +132,8 @@ const contactInfo = [
   </div>
 
   <div
-    class="max-w-300 mx-auto pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background"
+    class="max-w-300 mx-auto pt-8 flex flex-col md:flex-row justify-center gap-4 text-sm text-background"
   >
     <p>© {currentYear} Nuts Peru. Todos los derechos reservados.</p>
-    <div class="flex gap-6">
-      <a href="#" class="hover:text-white transition-colors"
-        >Política de Privacidad</a
-      >
-      <a href="#" class="hover:text-white transition-colors"
-        >Términos y Condiciones</a
-      >
-    </div>
   </div>
 </footer>
