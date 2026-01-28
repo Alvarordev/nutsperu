@@ -27,12 +27,7 @@ const initialCategories = categoriesParam ? categoriesParam.split(",") : [];
       </div>
     </section>
     <section class="py-20">
-      <ProductsFilter
-        products={products}
-        initialSearch={searchParam}
-        initialCategories={initialCategories}
-        client:load
-      />
+      <ProductsFilter products={products} client:only="react" />
     </section>
   </main>
 </Layout>

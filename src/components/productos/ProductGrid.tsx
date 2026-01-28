@@ -1,11 +1,5 @@
 import Button from "../common/Button";
-
-interface Product {
-  name: string;
-  slug: string;
-  category: string;
-  images: { id: string; src: string }[];
-}
+import type { Product } from "../../types/product";
 
 interface ProductGridProps {
   products: Product[];

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { categoryLabels, type Category } from "../../types/product";
 
 interface CategoryFilterProps {
   categories: string[];
@@ -26,14 +27,6 @@ export default function CategoryFilter({
     onCategoryChange(newSelected);
   };
 
-  const categoryLabels: Record<string, string> = {
-    semillas: "Semillas",
-    nueces: "Nueces",
-    tostados: "Tostados",
-    deshidratados: "Deshidratados",
-    confitado: "Confitado",
-  };
-
   return (
     <ul className="gap-4 flex flex-col mt-2">
       {categories.map((category) => (
@@ -48,7 +41,7 @@ export default function CategoryFilter({
             />
           </div>
           <label htmlFor={category} className="ml-5 text-lg cursor-pointer select-none pb-1">
-            {categoryLabels[category] || category}
+            {categoryLabels[category as Category] || category}
           </label>
         </li>
       ))}

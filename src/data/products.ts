@@ -34,9 +34,11 @@ import FrutaConfitadaCenital from "../assets/productos/fruta-confitada/fruta-con
 import ChiaCenital from "../assets/productos/chia/chia-cenital.png";
 import AnisCenital from "../assets/productos/anis/anis-cenital.png";
 import AlmendraCenital from "../assets/productos/almendra/almendras-cenital.png";
-
-
-
+import AvellanasCenital from "../assets/productos/avellanas/avellanas-cenital.png";
+import CanelaCenital from "../assets/productos/canela/canela-cenital.png";
+import CocoCenital from "../assets/productos/coco/coco-cenital.png";
+import HigosCenital from "../assets/productos/higos/higos-cenital.png";
+import PasasCenital from "../assets/productos/pasas/pasas-cenital.png";
 
 export const products = [
   {
@@ -65,73 +67,61 @@ export const products = [
     slug: "pistacho",
     category: "nueces",
     description:
-    "Ofrecemos pistachos de primera calidad, ideales para quienes buscan un snack saludable y sabroso, así como para su uso en repostería y cocina gourmet.",
+      "Ofrecemos pistachos de primera calidad, ideales para quienes buscan un snack saludable y sabroso, así como para su uso en repostería y cocina gourmet.",
     images: [
       { id: "cenital", src: PistachoCenital.src },
       { id: "empaque", src: PistachoEmpaque.src },
       { id: "entero", src: PistachoEntero.src },
     ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Arándanos Deshidratados",
     slug: "arandanos-deshidratados",
     category: "deshidratados",
     description:
-    "Nuestros arándanos son seleccionados por su sabor dulce y textura jugosa, ideales para consumir frescos o como ingrediente en una variedad de platillos.",
+      "Nuestros arándanos son seleccionados por su sabor dulce y textura jugosa, ideales para consumir frescos o como ingrediente en una variedad de platillos.",
     images: [
       { id: "cenital", src: ArandanoCenital.src },
       { id: "empaque", src: ArandanoEmpaque.src },
       { id: "entero", src: ArandanoEntero.src },
     ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Semillas de Calabaza",
     slug: "semillas-de-calabaza",
     category: "semillas",
     description:
-    "Nuestras semillas de calabaza son una fuente rica en nutrientes, perfectas para un snack saludable o como adición crujiente a ensaladas y otros platillos.",
+      "Nuestras semillas de calabaza son una fuente rica en nutrientes, perfectas para un snack saludable o como adición crujiente a ensaladas y otros platillos.",
     images: [
       { id: "cenital", src: CalabazaCenital.src },
       { id: "empaque", src: CalabazaEmpaque.src },
       { id: "entero", src: CalabazaEntero.src },
     ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Almendras",
     slug: "almendras",
     category: "nueces",
     description:
-    "Nuestras almendras son una fuente rica en nutrientes, perfectas para un snack saludable o como adición crujiente a ensaladas y otros platillos.",
-    images: [
-      { id: "cenital", src: AlmendraCenital.src },
-    ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+      "Nuestras almendras son una fuente rica en nutrientes, perfectas para un snack saludable o como adición crujiente a ensaladas y otros platillos.",
+    images: [{ id: "cenital", src: AlmendraCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Damasco Deshidratado",
     slug: "damasco-deshidratado",
     category: "deshidratados",
     description:
-    "Nuestro damasco deshidratado es dulce y lleno de sabor, ideal para consumir como snack o para incorporar en diversas recetas culinarias.",
+      "Nuestro damasco deshidratado es dulce y lleno de sabor, ideal para consumir como snack o para incorporar en diversas recetas culinarias.",
     images: [
       { id: "cenital", src: DamascoCenital.src },
       { id: "empaque", src: DamascoEmpaque.src },
       { id: "entero", src: DamascoEntero.src },
     ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Nuez Brasilera",
@@ -139,12 +129,8 @@ export const products = [
     category: "nueces",
     description:
       "Nuestra nuez brasilera es una fuente rica en nutrientes, perfecta para un snack saludable o como adición crujiente a ensaladas y otros platillos.",
-    images: [
-      { id: "cenital", src: NuezBrasilCenital.src },
-    ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    images: [{ id: "cenital", src: NuezBrasilCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Granola",
@@ -157,24 +143,20 @@ export const products = [
       { id: "empaque", src: GranolaEmpaque.src },
       { id: "entero", src: GranolaEntero.src },
     ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Nuez de Cajú",
     slug: "nuez-de-caju",
     category: "nueces",
     description:
-    "Nuestra nuez de cajú es seleccionada cuidadosamente para ofrecer un producto fresco y delicioso, ideal para consumo directo o como ingrediente en diversas recetas.",
+      "Nuestra nuez de cajú es seleccionada cuidadosamente para ofrecer un producto fresco y delicioso, ideal para consumo directo o como ingrediente en diversas recetas.",
     images: [
       { id: "cenital", src: NuezCajuCenital.src },
       { id: "empaque", src: NuezCajuEmpaque.src },
       { id: "entero", src: NuezCaju.src },
     ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Guindones",
@@ -182,12 +164,8 @@ export const products = [
     category: "deshidratados",
     description:
       "Nuestros guindones son dulces y jugosos, perfectos para disfrutar como snack saludable o para añadir un toque especial a tus recetas favoritas.",
-    images: [
-      { id: "cenital", src: GuindonCenital.src },
-    ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    images: [{ id: "cenital", src: GuindonCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Linaza",
@@ -195,40 +173,30 @@ export const products = [
     category: "semillas",
     description:
       "Nuestra linaza es de alta calidad, ideal para realzar el sabor y la textura de una variedad de platillos en la cocina diaria.",
-    images: [
-      { id: "cenital", src: LinazaCenital.src },
-    ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    images: [{ id: "cenital", src: LinazaCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Pasas Rubias",
     slug: "pasas-rubias",
     category: "deshidratados",
     description:
-    "Nuestras pasas rubias son dulces y jugosas, perfectas para disfrutar como snack saludable o para añadir un toque especial a tus recetas favoritas.",
+      "Nuestras pasas rubias son dulces y jugosas, perfectas para disfrutar como snack saludable o para añadir un toque especial a tus recetas favoritas.",
     images: [
       { id: "cenital", src: PasasRubiasCenital.src },
       { id: "empaque", src: PasasRubiasEmpaque.src },
       { id: "entero", src: PasasRubiasEntero.src },
     ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Anís",
     slug: "anis",
     category: "semillas",
     description:
-      "Nuestro anís es seleccionado cuidadosamente para ofrecer un  producto fresco y delicioso, ideal para consumo directo o como ingrediente en diversas recetas.", 
-    images: [
-      { id: "cenital", src: AnisCenital.src },
-    ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+      "Nuestro anís es seleccionado cuidadosamente para ofrecer un  producto fresco y delicioso, ideal para consumo directo o como ingrediente en diversas recetas.",
+    images: [{ id: "cenital", src: AnisCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Ajonjolí",
@@ -236,12 +204,8 @@ export const products = [
     category: "semillas",
     description:
       "Nuestro ajonjolí es de alta calidad, ideal para realzar el sabor y la textura de una variedad de platillos en la cocina diaria.",
-    images: [
-      { id: "cenital", src: AjonjoliCenital.src },
-    ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    images: [{ id: "cenital", src: AjonjoliCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Nuez de Nogal",
@@ -249,12 +213,17 @@ export const products = [
     category: "nueces",
     description:
       "Nuestra nuez de nogal es seleccionada cuidadosamente para ofrecer un producto fresco y delicioso, ideal para consumo directo o como ingrediente en diversas recetas.",
-    images: [
-      { id: "cenital", src: NuezNogalCenital.src },
-    ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    images: [{ id: "cenital", src: NuezNogalCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
+  },
+  {
+    name: "Pasas",
+    slug: "pasas",
+    category: "deshidratados",
+    description:
+      "Nuestras pasas son dulces y jugosas, perfectas para disfrutar como snack saludable o para añadir un toque especial a tus recetas favoritas.",
+    images: [{ id: "cenital", src: PasasCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Fruta Confitada",
@@ -262,12 +231,8 @@ export const products = [
     category: "confitado",
     description:
       "Nuestra fruta confitada es dulce y llena de sabor, ideal para consumir como snack o para incorporar en diversas recetas culinarias.",
-    images: [
-      { id: "cenital", src: FrutaConfitadaCenital.src },
-    ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    images: [{ id: "cenital", src: FrutaConfitadaCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
   },
   {
     name: "Chía",
@@ -275,12 +240,43 @@ export const products = [
     category: "semillas",
     description:
       "Nuestra chía es de alta calidad, ideal para realzar el sabor y la textura de una variedad de platillos en la cocina diaria.",
-    images: [
-      { id: "cenital", src: ChiaCenital.src },
-    ],
-    presentations: [
-      { label: "Entero", id: "entero" },
-    ]
+    images: [{ id: "cenital", src: ChiaCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
   },
-
+  {
+    name: "Avellanas",
+    slug: "avellanas",
+    category: "nueces",
+    description:
+      "Nuestras avellanas son una fuente rica en nutrientes, perfectas para un snack saludable o como adición crujiente a ensaladas y otros platillos.",
+    images: [{ id: "cenital", src: AvellanasCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
+  },
+  {
+    name: "Canela en Polvo",
+    slug: "canela-en-polvo",
+    category: "confitado",
+    description:
+      "Nuestra canela en polvo es seleccionada cuidadosamente para ofrecer un producto fresco y delicioso, ideal para consumo directo o como ingrediente en diversas recetas.",
+    images: [{ id: "cenital", src: CanelaCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
+  },
+  {
+    name: "Coco Rallado",
+    slug: "coco-rallado",
+    category: "confitado",
+    description:
+      "Nuestro coco rallado es de alta calidad, ideal para realzar el sabor y la textura de una variedad de platillos en la cocina diaria.",
+    images: [{ id: "cenital", src: CocoCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
+  },
+  {
+    name: "Higos",
+    slug: "higos",
+    category: "deshidratados",
+    description:
+      "Nuestros higos secos son dulces y jugosos, perfectos para disfrutar como snack saludable o para añadir un toque especial a tus recetas favoritas.",
+    images: [{ id: "cenital", src: HigosCenital.src }],
+    presentations: [{ label: "Entero", id: "entero" }],
+  },
 ];

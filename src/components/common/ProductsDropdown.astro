@@ -1,0 +1,26 @@
+---
+import { categoryLabels, type Category } from "../../types/product";
+
+interface Props {
+  categories: Category[];
+}
+
+const { categories } = Astro.props;
+---
+
+<div
+  class="absolute top-full left-0 bg-primary-muted rounded-b-2xl rounded-tr-2xl shadow-lg overflow-hidden opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 min-w-60 z-100"
+>
+  <div class="py-4 pl-4 pr-20">
+    {
+      categories.map((category) => (
+        <a
+          href={`/productos?categories=${category}`}
+          class="block px-6 py-2 text-foreground hover:bg-primary-muted transition-colors font-bold text-lg hover:underline"
+        >
+          {categoryLabels[category]}
+        </a>
+      ))
+    }
+  </div>
+</div>

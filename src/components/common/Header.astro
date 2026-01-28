@@ -1,11 +1,21 @@
 ---
 import logo from "../../assets/logo-white.png";
 import { ChevronDown } from "@lucide/astro";
+import ProductsDropdown from "./ProductsDropdown.astro";
+import type { Category } from "../../types/product";
 
 const navItems = [
   { name: "Nuestros Productos", href: "/productos" },
   { name: "Sobre Nosotros", href: "/nosotros" },
   { name: "Contacto", href: "#" },
+];
+
+const categories: Category[] = [
+  "semillas",
+  "nueces",
+  "tostados",
+  "deshidratados",
+  "confitado",
 ];
 ---
 
@@ -23,17 +33,27 @@ const navItems = [
 
     <nav class="hidden md:flex items-center gap-6">
       {
-        navItems.map((item) => (
-          <a
-            href={item.href}
-            class="flex items-center text-[17px] text-background transition-colors font-semibold leading-tight hover:bg-primary-muted hover:text-foreground rounded-2xl py-2 px-3"
-          >
-            {item.name}
-            {item.name === "Nuestros Productos" ? (
-              <ChevronDown class="h-5 w-5 ml-1 mt-1" />
-            ) : null}
-          </a>
-        ))
+        navItems.map((item) =>
+          item.name === "Nuestros Productos" ? (
+            <div class="relative group">
+              <a
+                href={item.href}
+                class="flex items-center text-[17px] text-background transition-colors duration-200 font-semibold leading-tight group-hover:bg-primary-muted group-hover:text-foreground rounded-t-2xl group-hover:rounded-b-none py-2 px-3"
+              >
+                {item.name}
+                <ChevronDown class="h-5 w-5 ml-1 mt-1" />
+              </a>
+              <ProductsDropdown categories={categories} />
+            </div>
+          ) : (
+            <a
+              href={item.href}
+              class="flex items-center text-[17px] text-background transition-colors font-semibold leading-tight hover:bg-primary-muted hover:text-foreground rounded-2xl py-2 px-3"
+            >
+              {item.name}
+            </a>
+          )
+        )
       }
     </nav>
   </div>
