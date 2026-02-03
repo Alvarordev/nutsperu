@@ -1,24 +1,145 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import AboutImage from "../../assets/about/about-ej1.webp";
+import { Nut, SearchCheck, ShieldCheck } from "@lucide/astro";
 ---
 
 <Layout>
-  <main class="w-full min-h-screen bg-background">
-    <section class="bg-primary py-20">
-      <div class="w-full max-w-300 mx-auto text-background">
-        <h1 class="font-black text-5xl font-title">Sobre Nosotros</h1>
-        <p class="mt-6 text-xl font-normal max-w-200">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non officiis
-          ad, tempora accusantium repudiandae voluptatum dolorum illum omnis
-          nihil, eum, excepturi consequatur impedit qui unde beatae sint minima
-          sequi quas.
-        </p>
-      </div>
-    </section>
-    <section class="w-full bg-primary-muted py-20">
-      <div class="w-full max-w-300 mx-auto">
-        <h2 class="text-5xl font-black font-title">Quienes Somos?</h2>
-      </div>
-    </section>
-  </main>
+    <main class="w-full min-h-screen bg-background">
+        <section class="bg-primary py-20">
+            <div class="w-full max-w-300 mx-auto text-background">
+                <h1 class="font-black text-5xl font-title">Sobre Nosotros</h1>
+                <p class="mt-6 text-xl font-normal max-w-200">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Non officiis ad, tempora accusantium repudiandae voluptatum
+                    dolorum illum omnis nihil.
+                </p>
+            </div>
+        </section>
+        <section class="w-full py-30">
+            <div class="w-full max-w-300 mx-auto flex justify-between">
+                <div class="max-w-137.5">
+                    <h2 class="text-5xl font-black font-title">
+                        ¿Quiénes Somos?
+                    </h2>
+                    <p class="mt-10 text-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Delectus quam, nostrum possimus omnis dignissimos veniam
+                        asperiores tempore earum numquam porro adipisci quaerat
+                        ex. Illum, quisquam omnis fuga repellendus nihil quasi?
+
+                        <br class="mb-4" />
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Delectus quam, nostrum possimus omnis dignissimos veniam
+                        asperiores tempore earum numquam porro adipisci quaerat
+                        ex. Illum, quisquam omnis fuga repellendus nihil quasi?
+                    </p>
+                </div>
+                <div class="max-w-137.5 rounded-2xl shadow-md">
+                    <img
+                        src={AboutImage.src}
+                        alt="about"
+                        class="w-full rounded-2xl"
+                    />
+                </div>
+            </div>
+        </section>
+        <section class="w-full bg-primary-muted py-30">
+            <div class="w-full max-w-300 mx-auto grid grid-cols-2 shadow-md">
+                <div class="bg-secondary p-20 col-span-1">
+                    <h3 class="font-title font-black text-3xl">
+                        Nuestra Filosofia
+                    </h3>
+                    <p class="mt-4 text-xl font-normal">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Tempore, quidem reprehenderit. Sequi libero autem
+                        nemo assumenda odit itaque beatae cum ullam enim
+                        voluptatum, quae rem!
+                    </p>
+                </div>
+                <div class="bg-background p-20 col-span-1">
+                    <h3 class="font-title font-black text-3xl">
+                        Nuestra Visión
+                    </h3>
+                    <p class="mt-4 text-xl font-normal">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Tempore, quidem reprehenderit. Sequi libero autem
+                        nemo assumenda odit itaque beatae cum ullam enim
+                        voluptatum, quae rem!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="w-full bg-background py-30">
+            <div class="w-full max-w-300 mx-auto flex flex-col items-center">
+                <h2 class="text-5xl font-black font-title">Nuestros Valores</h2>
+                <p class="mt-10 text-xl font-normal">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Rerum adipisci veritatis eum accusantium
+                </p>
+                <div class="grid grid-cols-3 gap-6 w-full mt-10">
+                    <div class="flex flex-col items-center col-span-1">
+                        <div class="rounded-full bg-secondary p-6 mb-5">
+                            <ShieldCheck class="size-15" />
+                        </div>
+                        <h3 class="font-black text-2xl">Confianza</h3>
+                        <p class="mt-4 text-lg font-normal text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nemo assumenda odit itaque beatae cum
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center col-span-1">
+                        <div class="rounded-full bg-secondary p-6 mb-5">
+                            <SearchCheck class="size-15" />
+                        </div>
+                        <h3 class="font-black text-2xl">Transparencia</h3>
+                        <p class="mt-4 text-lg font-normal text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nemo assumenda odit itaque beatae cum
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center col-span-1">
+                        <div class="rounded-full bg-secondary p-6 mb-5">
+                            <Nut class="size-15" />
+                        </div>
+                        <h3 class="font-black text-2xl">Calidad</h3>
+                        <p class="mt-4 text-lg font-normal text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nemo assumenda odit itaque beatae cum
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full bg-primary-muted py-30">
+            <div class="w-full max-w-300 mx-auto flex justify-between">
+                <div class="max-w-137.5 rounded-2xl shadow-md">
+                    <img
+                        src={AboutImage.src}
+                        alt="about"
+                        class="w-full rounded-2xl"
+                    />
+                </div>
+                <div class="max-w-137.5">
+                    <h2 class="text-5xl font-black font-title">
+                        ¿Por qué elegirnos?
+                    </h2>
+                    <p class="mt-10 text-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Delectus quam, nostrum possimus omnis dignissimos veniam
+                        asperiores tempore earum numquam porro adipisci quaerat
+                        ex. Illum, quisquam omnis fuga repellendus nihil quasi?
+
+                        <br class="mb-4" />
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Delectus quam, nostrum possimus omnis dignissimos veniam
+                        asperiores tempore earum numquam porro adipisci quaerat
+                        ex. Illum, quisquam omnis fuga repellendus nihil quasi?
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 </Layout>

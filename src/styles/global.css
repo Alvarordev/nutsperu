@@ -1,35 +1,35 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Bespoke Sans';
-  src: url('../assets/fonts/BespokeSans-Variable.woff2') format('woff2');
-  font-weight: 300 900;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Bespoke Sans";
+    src: url("../assets/fonts/BespokeSans-Variable.woff2") format("woff2");
+    font-weight: 300 900;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Excon';
-  src: url('../assets/fonts/Excon-Variable.woff2') format('woff2');
-  font-weight: 300 900;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Excon";
+    src: url("../assets/fonts/Excon-Variable.woff2") format("woff2");
+    font-weight: 300 900;
+    font-style: normal;
+    font-display: swap;
 }
 
 @theme {
-  --color-background: hsl(35 49% 98%);
-  --color-foreground: hsl(24 7% 13%);
-  --color-primary: hsl(297 37% 25%);
-  --color-secondary: hsl(79 54% 51%);
-  --color-accent: hsl(42 97% 54%);
-  --color-muted: hsl(35 20% 80%);
-  --color-muted-foreground: hsl(294 20% 40%);
-  --color-primary-muted: hsl(290 25% 91%);
-  --color-border: #161616;
-  --color-dark: #161616;
-  
-  --image-site-bg: url('../assets/site-background.jpg');
+    --color-background: hsl(35 49% 98%);
+    --color-foreground: hsl(24 7% 13%);
+    --color-primary: hsl(297 37% 30%);
+    --color-secondary: hsl(79 54% 51%);
+    --color-accent: hsl(42 97% 54%);
+    --color-muted: hsl(35 20% 80%);
+    --color-muted-foreground: hsl(294 20% 40%);
+    --color-primary-muted: hsl(290 25% 91%);
+    --color-border: #161616;
+    --color-dark: #161616;
 
-  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-title: "Excon", sans-serif;
+    --image-site-bg: url("../assets/site-background.jpg");
+
+    --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-title: "Excon", sans-serif;
 }
