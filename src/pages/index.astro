@@ -13,27 +13,57 @@ import nuezNogalGemini from "../assets/macro-fotos/nuez-nogal-gemini.png";
 import pistachoGemini from "../assets/macro-fotos/pistacho-gemini.png";
 import AboutSection from "../components/landing/AboutSection.astro";
 import FloatingWhatsApp from "../components/common/FloatingWhatsApp.astro";
+import Video from "../assets/videofile.mp4";
 ---
 
 <Layout title="Nuts Peru">
-  <FloatingWhatsApp />
+    <FloatingWhatsApp />
 
-  <main class="relative w-full">
-    <HeroSection
-      tableImageUrl={table.src}
-      macroImages={{
-        almendra: almendraGemini.src,
-        mani: maniGemini.src,
-        nuezBrasil: nuezBrasilGemini.src,
-        nuezNogal: nuezNogalGemini.src,
-        pistacho: pistachoGemini.src,
-      }}
-    />
+    <main class="relative w-full">
+        <HeroSection
+            tableImageUrl={table.src}
+            macroImages={{
+                almendra: almendraGemini.src,
+                mani: maniGemini.src,
+                nuezBrasil: nuezBrasilGemini.src,
+                nuezNogal: nuezNogalGemini.src,
+                pistacho: pistachoGemini.src,
+            }}
+        />
 
-    <AboutSection />
-    <ProductsSection />
-    <PartnersSection />
-    <HowWeWorkSection />
-    <FaqSection />
-  </main>
+        <AboutSection />
+        <section class="w-full">
+            <video
+                src={Video}
+                id="video"
+                class="project-video w-full max-h-150 object-cover"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"></video>
+        </section>
+        <ProductsSection />
+        <PartnersSection />
+        <HowWeWorkSection />
+        <FaqSection />
+    </main>
 </Layout>
+
+<script>
+    function initVideo() {
+        const video =
+            document.querySelector<HTMLVideoElement>(".project-video");
+
+        if (!video) return;
+
+        video.playbackRate = 1.1;
+
+        video.play().catch((error) => {
+            console.log("Autoplay prevented:", error);
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", initVideo);
+    initVideo();
+</script>
