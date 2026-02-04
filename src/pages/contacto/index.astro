@@ -1,0 +1,278 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Mail, Phone, Clock } from "@lucide/astro";
+import StarBadge from "../../components/common/StarBadge.astro";
+import FloatingWhatsApp from "../../components/common/FloatingWhatsApp.astro";
+
+const contactInfo = [
+    {
+        icon: Mail,
+        title: "Correo Electrónico",
+        content: "ventas@nutsperu.pe",
+        href: "mailto:ventas@nutsperu.pe",
+        description: "Escríbenos para cotizaciones y consultas",
+    },
+    {
+        icon: Phone,
+        title: "Teléfono",
+        content: "+51 956 903 670",
+        href: "tel:+51956903670",
+        description: "Llámanos de Lunes a Viernes",
+    },
+    {
+        icon: Clock,
+        title: "Horario de Atención",
+        content: "Lunes a Viernes: 8:00 AM - 6:00 PM",
+        href: null,
+        description: "Sábados: 8:00 AM - 1:00 PM",
+    },
+];
+---
+
+<Layout title="Contacto - Nuts Peru">
+    <FloatingWhatsApp />
+
+    <main class="w-full min-h-screen bg-background">
+        <section class="bg-primary py-12 md:py-20">
+            <div
+                class="w-full max-w-300 mx-auto text-background px-4 sm:px-6 lg:px-8 xl:px-0"
+            >
+                <h1
+                    class="font-black text-3xl md:text-4xl lg:text-5xl font-title"
+                >
+                    Contáctanos
+                </h1>
+                <p
+                    class="mt-4 md:mt-6 text-base md:text-lg lg:text-xl font-normal max-w-200 text-balance"
+                >
+                    Estamos aquí para atenderte. Contáctanos para consultas,
+                    cotizaciones o para conocer más sobre nuestros productos de
+                    calidad premium.
+                </p>
+            </div>
+        </section>
+
+        <section class="w-full py-16 md:py-30">
+            <div class="w-full max-w-300 mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-black font-title"
+                    >
+                        Información de Contacto
+                    </h2>
+                    <p class="mt-4 text-base md:text-lg lg:text-xl">
+                        Elige el medio que prefieras para comunicarte con
+                        nosotros
+                    </p>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16"
+                >
+                    {
+                        contactInfo.map((info) => (
+                            <div class="flex flex-col items-center text-center p-6 md:p-8 bg-background rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+                                <div class="relative flex items-center justify-center p-4 md:p-6 mb-5">
+                                    <StarBadge class="w-full h-full absolute inset-0 text-secondary" />
+                                    <info.icon class="size-10 md:size-12 z-10 text-foreground" />
+                                </div>
+                                <h3 class="font-title font-bold text-xl md:text-2xl mb-2 text-foreground">
+                                    {info.title}
+                                </h3>
+                                {info.href ? (
+                                    <a
+                                        href={info.href}
+                                        class="text-base md:text-lg font-bold text-primary hover:text-secondary transition-colors mb-2"
+                                    >
+                                        {info.content}
+                                    </a>
+                                ) : (
+                                    <p class="text-base md:text-lg font-bold text-primary mb-2">
+                                        {info.content}
+                                    </p>
+                                )}
+                                <p class="text-sm md:text-base text-gray-600">
+                                    {info.description}
+                                </p>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full bg-primary-muted py-16 md:py-30">
+            <div class="w-full max-w-300 mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-black font-title"
+                    >
+                        Envíanos un Mensaje
+                    </h2>
+                    <p class="mt-4 lg:mt-10 text-base md:text-lg lg:text-xl">
+                        ¿Tienes alguna pregunta sobre nuestros productos o
+                        servicios? Completa el formulario y nos pondremos en
+                        contacto contigo lo antes posible.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-background rounded-2xl shadow-lg p-6 md:p-10 lg:p-12"
+                >
+                    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                        <div class="lg:w-2/5">
+                            <h3
+                                class="font-title font-bold text-2xl mb-6 text-foreground"
+                            >
+                                ¿Por qué contactarnos?
+                            </h3>
+                            <ul class="space-y-4 text-base md:text-lg mb-8">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-primary font-bold">✓</span
+                                    >
+                                    <span
+                                        >Cotizaciones personalizadas para tu
+                                        negocio</span
+                                    >
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-primary font-bold">✓</span
+                                    >
+                                    <span
+                                        >Asesoría sobre nuestros productos y
+                                        presentaciones</span
+                                    >
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-primary font-bold">✓</span
+                                    >
+                                    <span
+                                        >Información sobre certificaciones y
+                                        calidad</span
+                                    >
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-primary font-bold">✓</span
+                                    >
+                                    <span
+                                        >Consultas sobre pedidos mayoristas</span
+                                    >
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-primary font-bold">✓</span
+                                    >
+                                    <span
+                                        >Atención personalizada para
+                                        distribuidores</span
+                                    >
+                                </li>
+                            </ul>
+
+                            <div
+                                class="p-6 bg-secondary/10 rounded-lg border-l-4 border-secondary"
+                            >
+                                <p
+                                    class="font-medium text-sm md:text-base text-foreground"
+                                >
+                                    <strong>Tiempo de respuesta:</strong> Nos comprometemos
+                                    a responder todas las consultas en un plazo máximo
+                                    de 24 horas hábiles.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lg:w-3/5">
+                            <form class="space-y-5">
+                                <div>
+                                    <label
+                                        for="name"
+                                        class="block text-sm font-medium mb-2 text-foreground"
+                                        >Nombre Completo *</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                        placeholder="Tu nombre"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label
+                                        for="email"
+                                        class="block text-sm font-medium mb-2 text-foreground"
+                                        >Correo Electrónico *</label
+                                    >
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                        placeholder="tu@email.com"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label
+                                        for="phone"
+                                        class="block text-sm font-medium mb-2 text-foreground"
+                                        >Teléfono</label
+                                    >
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                        placeholder="+51 999 999 999"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label
+                                        for="subject"
+                                        class="block text-sm font-medium mb-2 text-foreground"
+                                        >Asunto *</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="subject"
+                                        name="subject"
+                                        required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                        placeholder="¿En qué podemos ayudarte?"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label
+                                        for="message"
+                                        class="block text-sm font-medium mb-2 text-foreground"
+                                        >Mensaje *</label
+                                    >
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        required
+                                        rows="4"
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none"
+                                        placeholder="Escribe tu mensaje aquí..."
+                                    ></textarea>
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    class="w-full bg-primary text-background font-bold py-4 px-6 rounded-lg hover:bg-secondary transition-colors duration-300"
+                                >
+                                    Enviar Mensaje
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
