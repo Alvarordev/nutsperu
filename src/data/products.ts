@@ -165,8 +165,8 @@ export const products = [
     ],
   },
   {
-    name: "Damascos Deshidratado",
-    slug: "damascos-deshidratado",
+    name: "Damascos Deshidratados",
+    slug: "damascos-deshidratados",
     category: "deshidratados",
     description:
       "Nuestro damasco deshidratado es dulce y lleno de sabor, ideal para consumir como snack o para incorporar en diversas recetas culinarias.",
@@ -389,11 +389,11 @@ export const products = [
     description:
       "Nuestro coco rallado es de alta calidad, ideal para realzar el sabor y la textura de una variedad de platillos en la cocina diaria.",
     images: [{ id: "cenital", src: CocoCenital.src }, { id: "rallado", src: CocoRallado.src }, { id: "molido", src: CocoMolido.src }],
-    presentations: [{ label: "Rallado", id: "rallado" }, { label: "Molido", id: "molido" }],
+    presentations: [{ label: "Rallado Largo", id: "rallado" }, { label: "Molido", id: "molido" }],
   },
   {
-    name: "Higos",
-    slug: "higos",
+    name: "Higos Deshidratados",
+    slug: "higos-deshidratados",
     category: "deshidratados",
     description:
       "Nuestros higos secos son dulces y jugosos, perfectos para disfrutar como snack saludable o para añadir un toque especial a tus recetas favoritas.",
