@@ -1,97 +1,101 @@
 ---
-import floraYFauna from "../../assets/partners/flora-y-fauna.png";
 import laPeregrina from "../../assets/partners/la-peregrina.png";
-import vivanda from "../../assets/partners/vivanda.png";
-import whyNut from "../../assets/partners/why-nut.webp";
-import texture from "../../assets/texture.png";
+import texture from "../../assets/texture.webp";
+import LaPurita from "../../assets/partners/la-purita.avif";
+import Romex from "../../assets/partners/romex.svg";
+import GrupoSantis from "../../assets/partners/grupo-santis.png";
+import Laritza from "../../assets/partners/laritza.png";
 
 const partners = [
-  { name: "Flora y Fauna", logo: floraYFauna, offset: "" },
-  { name: "La Peregrina", logo: laPeregrina, offset: "" },
-  { name: "Vivanda", logo: vivanda, offset: "pb-4" },
-  { name: "Why Nut", logo: whyNut, offset: "" },
+    { name: "La Peregrina", logo: laPeregrina, offset: "" },
+    { name: "La Purita", logo: LaPurita, offset: "" },
+    { name: "Romex", logo: Romex, offset: "pb-10 pr-4" },
+    { name: "Grupo Santis", logo: GrupoSantis, offset: "px-8" },
+    { name: "Laritza", logo: Laritza, offset: "" },
 ];
 ---
 
 <section class="w-full bg-background overflow-hidden">
-  <div>
-    <img
-      src={texture.src}
-      alt="top texture"
-      class="translate-y-5 md:translate-y-0.5 min-w-360 w-full object-cover rotate-180"
-    />
-    <div class="relative w-full bg-primary overflow-hidden pb-6 z-10">
-      <div class="flex justify-center items-center pb-14 px-6 md:px-0">
-        <h2
-          class="flex md:gap-6 items-center font-black text-balance text-3xl md:text-[2.75rem] text-background font-title text-center"
-        >
-          <span class="text-2xl inline-block">✦</span>
-          Elegidos por tus marcas favoritas
-          <span class="text-2xl inline-block">✦</span>
-        </h2>
-      </div>
+    <div>
+        <img
+            src={texture.src}
+            alt="top texture"
+            class="translate-y-5 md:translate-y-0.5 min-w-360 w-full object-cover rotate-180"
+        />
+        <div class="relative w-full bg-primary overflow-hidden pb-6 z-10">
+            <div class="flex justify-center items-center pb-14 px-6 md:px-0">
+                <h2
+                    class="flex md:gap-6 items-center font-black text-balance text-3xl md:text-[2.75rem] text-background font-title text-center"
+                >
+                    <span class="text-2xl inline-block">✦</span>
+                    Elegidos por tus marcas favoritas
+                    <span class="text-2xl inline-block">✦</span>
+                </h2>
+            </div>
 
-      <div class="relative w-full overflow-hidden">
-        <div class="marquee-container flex gap-16">
-          <div class="marquee-content flex gap-16 items-center justify-center">
-            {
-              partners.map((partner) => (
-                <div class="shrink-0 w-60 h-auto flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:opacity-100">
-                  <img
-                    src={partner.logo.src}
-                    alt={partner.name}
-                    class={`w-full h-full object-contain ${partner.offset}`}
-                  />
+            <div class="relative w-full overflow-hidden">
+                <div class="marquee-container flex gap-16">
+                    <div
+                        class="marquee-content flex gap-12 items-center justify-center"
+                    >
+                        {
+                            partners.map((partner) => (
+                                <div class="shrink-0 w-60 h-auto flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:opacity-100">
+                                    <img
+                                        src={partner.logo.src}
+                                        alt={partner.name}
+                                        class={`w-full h-full object-contain ${partner.offset}`}
+                                    />
+                                </div>
+                            ))
+                        }
+                    </div>
+                    {
+                        Array.from({ length: 3 }).map(() => (
+                            <div class="marquee-content flex gap-12 items-center justify-center">
+                                {partners.map((partner) => (
+                                    <div class="shrink-0 w-60 h-auto flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:opacity-100">
+                                        <img
+                                            src={partner.logo.src}
+                                            alt={partner.name}
+                                            class={`w-full h-full object-contain ${partner.offset}`}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        ))
+                    }
                 </div>
-              ))
-            }
-          </div>
-          {
-            Array.from({ length: 3 }).map(() => (
-              <div class="marquee-content flex gap-16 items-center justify-center">
-                {partners.map((partner) => (
-                  <div class="shrink-0 w-60 h-auto flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:opacity-100">
-                    <img
-                      src={partner.logo.src}
-                      alt={partner.name}
-                      class={`w-full h-full object-contain ${partner.offset}`}
-                    />
-                  </div>
-                ))}
-              </div>
-            ))
-          }
+            </div>
         </div>
-      </div>
-    </div>
 
-    <img
-      src={texture.src}
-      alt="bottom texture"
-      class="-translate-y-5 md:-translate-y-0.5 min-w-360 w-full object-cover"
-    />
-  </div>
+        <img
+            src={texture.src}
+            alt="bottom texture"
+            class="-translate-y-5 md:-translate-y-0.5 min-w-360 w-full object-cover"
+        />
+    </div>
 </section>
 
 <script>
-  import gsap from "gsap";
+    import gsap from "gsap";
 
-  const container = document.querySelector(".marquee-container");
-  const content = document.querySelector(".marquee-content");
+    const container = document.querySelector(".marquee-container");
+    const content = document.querySelector(".marquee-content");
 
-  if (container && content) {
-    const contentWidth = content.getBoundingClientRect().width;
-    const gap = 64;
-    const totalWidth = contentWidth + gap;
+    if (container && content) {
+        const contentWidth = content.getBoundingClientRect().width;
+        const gap = 64;
+        const totalWidth = contentWidth + gap;
 
-    gsap.to(container, {
-      x: -totalWidth,
-      duration: 15,
-      ease: "none",
-      repeat: -1,
-      modifiers: {
-        x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
-      },
-    });
-  }
+        gsap.to(container, {
+            x: -totalWidth,
+            duration: 15,
+            ease: "none",
+            repeat: -1,
+            modifiers: {
+                x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
+            },
+        });
+    }
 </script>

@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 .github
 .github/*
+AGENTS.md

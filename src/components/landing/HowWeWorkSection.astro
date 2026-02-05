@@ -1,79 +1,80 @@
 ---
 import trabajoImage from "../../assets/working-gemini.webp";
+import fotoLanding from "../../assets/foto-landing.png";
 import { ArrowUpRight, Leaf, Factory, ShieldCheck } from "@lucide/astro";
 
 const steps = [
-  {
-    icon: Leaf,
-    subtitle: "Selección natural",
-    title: "Origen Controlado",
-    description:
-      "Trabajamos directamente con agricultores para asegurar la mejor materia prima.",
-  },
-  {
-    icon: Factory,
-    subtitle: "Procesamiento",
-    title: "Tostado Artesanal",
-    description:
-      "Tostamos nuestros frutos secos en pequeños lotes para garantizar frescura.",
-  },
-  {
-    icon: ShieldCheck,
-    subtitle: "Garantía total",
-    title: "Calidad Certificada",
-    description:
-      "Estrictos estándares sanitarios y de selección en cada etapa.",
-  },
+    {
+        icon: Leaf,
+        subtitle: "Selección natural",
+        title: "Origen Controlado",
+        description:
+            "Trabajamos directamente con agricultores para asegurar la mejor materia prima.",
+    },
+    {
+        icon: Factory,
+        subtitle: "Procesamiento",
+        title: "Tostado Artesanal",
+        description:
+            "Tostamos nuestros frutos secos en pequeños lotes para garantizar frescura.",
+    },
+    {
+        icon: ShieldCheck,
+        subtitle: "Garantía total",
+        title: "Calidad Certificada",
+        description:
+            "Estrictos estándares sanitarios y de selección en cada etapa.",
+    },
 ];
 ---
 
 <section class="bg-background py-20 px-4 md:px-0">
-  <div class="max-w-300 mx-auto flex flex-col gap-8">
-    <h2
-      class="font-title font-black text-4xl md:text-5xl text-center text-foreground max-w-4xl mx-auto leading-tight"
-    >
-      Gusto y Calidad en <br class="md:hidden" /> Cada Detalle
-    </h2>
+    <div class="max-w-300 mx-auto flex flex-col gap-8">
+        <h2
+            class="font-title font-black text-4xl md:text-5xl text-center text-foreground max-w-4xl mx-auto leading-tight"
+        >
+            Gusto y Calidad en <br class="md:hidden" /> Cada Detalle
+        </h2>
 
-    <div
-      class="max-w-265 mx-auto w-full h-75 md:h-120 rounded-4xl overflow-hidden shadow-xl"
-    >
-      <img
-        src={trabajoImage.src}
-        alt="Nuestra planta de procesamiento"
-        class="w-full h-full object-cover scale-110 hover:scale-115 transition-transform duration-700"
-      />
+        <div
+            class="max-w-265 mx-auto w-full h-75 md:h-120 rounded-4xl overflow-hidden shadow-xl"
+        >
+            <img
+                src={fotoLanding.src}
+                alt="Nuestra planta de procesamiento"
+                class="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-700"
+            />
+        </div>
+
+        <div
+            class="grid md:grid-cols-3 gap-8 md:gap-0 md:divide-x divide-primary/10 border-t border-primary/10 md:border-t-0 pt-10 md:pt-0"
+        >
+            {
+                steps.map((step) => (
+                    <div class="flex flex-col gap-4 px-4 md:px-8 items-start group cursor-pointer">
+                        <div class="flex flex-col gap-2 w-full">
+                            <span class="text-secondary font-bold text-sm md:text-base flex items-center gap-2">
+                                <span class="inline-block w-4 h-4 text-secondary fill-current mb-2.5">
+                                    ✦
+                                </span>
+                                {step.subtitle}
+                            </span>
+
+                            <h3 class="font-title font-black text-2xl md:text-3xl text-foreground leading-tight">
+                                {step.title}
+                            </h3>
+
+                            <p class="text-foreground text-base leading-relaxed">
+                                {step.description}
+                            </p>
+
+                            <div class="mt-4 flex justify-end w-full">
+                                <ArrowUpRight class="w-6 h-6 text-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
     </div>
-
-    <div
-      class="grid md:grid-cols-3 gap-8 md:gap-0 md:divide-x divide-primary/10 border-t border-primary/10 md:border-t-0 pt-10 md:pt-0"
-    >
-      {
-        steps.map((step) => (
-          <div class="flex flex-col gap-4 px-4 md:px-8 items-start group cursor-pointer">
-            <div class="flex flex-col gap-2 w-full">
-              <span class="text-secondary font-bold text-sm md:text-base flex items-center gap-2">
-                <span class="inline-block w-4 h-4 text-secondary fill-current mb-2.5">
-                  ✦
-                </span>
-                {step.subtitle}
-              </span>
-
-              <h3 class="font-title font-black text-2xl md:text-3xl text-foreground leading-tight">
-                {step.title}
-              </h3>
-
-              <p class="text-foreground text-base leading-relaxed">
-                {step.description}
-              </p>
-
-              <div class="mt-4 flex justify-end w-full">
-                <ArrowUpRight class="w-6 h-6 text-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-              </div>
-            </div>
-          </div>
-        ))
-      }
-    </div>
-  </div>
 </section>

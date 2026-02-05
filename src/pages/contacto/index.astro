@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { Mail, Phone, Clock } from "@lucide/astro";
 import StarBadge from "../../components/common/StarBadge.astro";
 import FloatingWhatsApp from "../../components/common/FloatingWhatsApp.astro";
+import AnimatedText from "../../components/common/AnimatedText.astro";
 
 const contactInfo = [
     {
@@ -37,18 +38,21 @@ const contactInfo = [
             <div
                 class="w-full max-w-300 mx-auto text-background px-4 sm:px-6 lg:px-8 xl:px-0"
             >
-                <h1
+                <AnimatedText
+                    as="h1"
+                    duration={1.8}
                     class="font-black text-3xl md:text-4xl lg:text-5xl font-title"
                 >
                     Contáctanos
-                </h1>
-                <p
+                </AnimatedText>
+                <AnimatedText
+                    duration={2}
                     class="mt-4 md:mt-6 text-base md:text-lg lg:text-xl font-normal max-w-200 text-balance"
                 >
                     Estamos aquí para atenderte. Contáctanos para consultas,
                     cotizaciones o para conocer más sobre nuestros productos de
                     calidad premium.
-                </p>
+                </AnimatedText>
             </div>
         </section>
 

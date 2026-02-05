@@ -1,11 +1,10 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import AboutImage from "../../assets/about/about-ej1.webp";
 import { Nut, SearchCheck, ShieldCheck } from "@lucide/astro";
 import StarBadge from "../../components/common/StarBadge.astro";
-import ManiMesa from "../../assets/mani-mesa.jpg";
-import Trabajo from "../../assets/trabajo-gemini.png";
-import Equipo from "../../assets/equip.jpg";
+import Nosotros from "../../assets/about/nosotros-1.png";
+import Nosotros2 from "../../assets/about/nosotros-2.png";
+import AnimatedText from "../../components/common/AnimatedText.astro";
 ---
 
 <Layout>
@@ -14,18 +13,21 @@ import Equipo from "../../assets/equip.jpg";
             <div
                 class="w-full max-w-300 mx-auto text-background px-4 sm:px-6 lg:px-8 xl:px-0"
             >
-                <h1
+                <AnimatedText
+                    as="h1"
+                    duration={1.8}
                     class="font-black text-3xl md:text-4xl lg:text-5xl font-title"
                 >
                     Sobre Nosotros
-                </h1>
-                <p
+                </AnimatedText>
+                <AnimatedText
+                    duration={2}
                     class="mt-4 md:mt-6 text-base md:text-lg lg:text-xl font-normal max-w-200 text-balance"
                 >
                     Impulsando la industria de frutos secos en Perú a través de
                     calidad premium, innovación y compromiso con la excelencia
                     alimentaria.
-                </p>
+                </AnimatedText>
             </div>
         </section>
         <section class="w-full py-16 md:py-30">
@@ -56,7 +58,7 @@ import Equipo from "../../assets/equip.jpg";
                 </div>
                 <div class="w-full lg:max-w-137.5 rounded-2xl shadow-md">
                     <img
-                        src={Trabajo.src}
+                        src={Nosotros2.src}
                         alt="about"
                         class="w-full rounded-2xl"
                     />
@@ -185,7 +187,7 @@ import Equipo from "../../assets/equip.jpg";
                     class="w-full lg:max-w-137.5 rounded-2xl shadow-md overflow-hidden max-h-96"
                 >
                     <img
-                        src={ManiMesa.src}
+                        src={Nosotros.src}
                         alt="about"
                         class="h-full w-full rounded-2xl object-cover"
                     />

@@ -65,6 +65,9 @@ import HigosCenital from "../assets/productos/higos/higos-cenital.png";
 import PasasCenital from "../assets/productos/pasas/pasas-cenital.png";
 import PasasEmpaque from "../assets/productos/pasas/pasas-empaque.webp";
 import PasasEntero from "../assets/productos/pasas/pasas-entero.webp";
+import PecanaCenital from "../assets/productos/pecana/pecana-cenital.png";
+import PecanaEmpaque from "../assets/productos/pecana/pecana-empaque.png";
+import PecanaEntero from "../assets/productos/pecana/pecana-entero.png";
 
 export const products = [
     {
@@ -167,8 +170,8 @@ export const products = [
         presentations: [{ label: "Entero", id: "entero" }],
     },
     {
-        name: "Nuez de Brasil",
-        slug: "nuez-de-brasil",
+        name: "Nueces de Brasil",
+        slug: "nueces-de-brasil",
         category: "nueces",
         description:
             "Nuestra nuez de Brasil es una fuente rica en nutrientes, perfecta para un snack saludable o como adición crujiente a ensaladas y otros platillos.",
@@ -214,14 +217,40 @@ export const products = [
         presentations: [{ label: "Entero", id: "entero" }],
     },
     {
-        name: "Guindones",
-        slug: "guindones",
+        name: "Guindones Deshidratados",
+        slug: "guindones-deshidratados",
         category: "deshidratados",
         description:
             "Nuestros guindones son dulces y jugosos, perfectos para disfrutar como snack saludable o para añadir un toque especial a tus recetas favoritas.",
         images: [
             { id: "cenital", src: GuindonCenital.src },
             { id: "entero", src: GuindonEntero.src },
+        ],
+        presentations: [{ label: "Entero", id: "entero" }],
+    },
+    {
+        name: "Pecanas",
+        slug: "pecanas",
+        category: "nueces",
+        description:
+            "Nuestras pecanas son una fuente rica en nutrientes, perfecta para un snack saludable o como adición crujiente",
+        images: [
+            { id: "cenital", src: PecanaCenital.src },
+            { id: "empaque", src: PecanaEmpaque.src },
+            { id: "entero", src: PecanaEntero.src },
+        ],
+        presentations: [{ label: "Entero", id: "entero" }],
+    },
+    {
+        name: "Aguaymantos Deshidratados",
+        slug: "aguaymantos-deshidratados",
+        category: "deshidratados",
+        description:
+            "Nuestros aguaymantos deshidratados son dulces y jugosos, perfectos para disfrutar como snack saludable o para añadir un toque especial a tus recetas favoritas.",
+        images: [
+            { id: "cenital", src: PasasRubiasCenital.src },
+            { id: "empaque", src: PasasRubiasEmpaque.src },
+            { id: "entero", src: PasasRubiasEntero.src },
         ],
         presentations: [{ label: "Entero", id: "entero" }],
     },
@@ -235,19 +264,6 @@ export const products = [
             { id: "cenital", src: LinazaCenital.src },
             { id: "empaque", src: LinazaEmpaque.src },
             { id: "entero", src: LinazaEntero.src },
-        ],
-        presentations: [{ label: "Entero", id: "entero" }],
-    },
-    {
-        name: "Pasas Rubias",
-        slug: "pasas-rubias",
-        category: "deshidratados",
-        description:
-            "Nuestras pasas rubias son dulces y jugosas, perfectas para disfrutar como snack saludable o para añadir un toque especial a tus recetas favoritas.",
-        images: [
-            { id: "cenital", src: PasasRubiasCenital.src },
-            { id: "empaque", src: PasasRubiasEmpaque.src },
-            { id: "entero", src: PasasRubiasEntero.src },
         ],
         presentations: [{ label: "Entero", id: "entero" }],
     },
@@ -274,8 +290,8 @@ export const products = [
         presentations: [{ label: "Entero", id: "entero" }],
     },
     {
-        name: "Nuez de Nogal",
-        slug: "nuez-de-nogal",
+        name: "Nueces de Nogal",
+        slug: "nueces-de-nogal",
         category: "nueces",
         description:
             "Nuestra nuez de nogal es seleccionada cuidadosamente para ofrecer un producto fresco y delicioso, ideal para consumo directo o como ingrediente en diversas recetas.",
