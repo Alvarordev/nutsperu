@@ -29,12 +29,12 @@ const { tableImageUrl, macroImages } = Astro.props;
         class="relative flex flex-col md:flex-row max-w-7xl mx-auto pb-2 md:pb-6 h-full [@media(min-width:1440px)_and_(min-height:900px)]:pb-18 w-full px-4 md:px-0 z-10"
     >
         <div
-            class="order-2 md:order-1 max-w-4xl text-left flex flex-col gap-4 pt-10 md:pt-8 lg:pt-32 px-0 md:px-10 2xl:px-0"
+            class="order-2 md:order-1 md:max-w-4xl lg:max-w-5xl text-left flex flex-col gap-4 pt-10 md:pt-8 lg:pt-32 px-0 md:px-10 2xl:px-0"
         >
             <AnimatedText
                 as="h1"
                 duration={1.8}
-                class="text-[2.45rem] [@media(min-width:405px)_and_(max-width:720px)]:text-[2.8rem] lg:text-6xl xl:text-[4.5rem] font-black leading-[1.1] font-title"
+                class="text-[2.45rem] [@media(min-width:405px)_and_(max-width:720px)]:text-[2.8rem] lg:text-5xl xl:text-[4.5rem] font-black leading-[1.1] font-title"
             >
                 Recien Tostados,
                 <br />
@@ -48,7 +48,11 @@ const { tableImageUrl, macroImages } = Astro.props;
                 /> en todo el Perú.
             </AnimatedText>
             <div class="pt-4">
-                <Button size="lg" class="py-2!">
+                <Button
+                    href="https://wa.me/51956903670"
+                    size="lg"
+                    class="py-2!"
+                >
                     Cotiza tu pedido
                     <ArrowRight class="size-5 ml-2" stroke-width={3} />
                 </Button>

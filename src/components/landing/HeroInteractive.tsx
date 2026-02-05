@@ -57,10 +57,10 @@ export function FloatingNuts({ images }: FloatingNutsProps) {
             {
                 y: 0,
                 opacity: 1,
-                duration: 1.5,
+                duration: 1.3,
                 stagger: 0.2,
                 ease: "power3.out",
-                delay: 0.5,
+                delay: 0.4,
                 onComplete: () => setIsAnimated(true),
             },
         );
@@ -206,7 +206,7 @@ export function ParallaxTable({ src }: ParallaxTableProps) {
             {
                 y: 0,
                 opacity: 1,
-                duration: 2,
+                duration: 1.5,
                 ease: "power3.out",
                 delay: 0.5,
                 onComplete: () => setIsAnimated(true),
