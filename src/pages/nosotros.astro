@@ -1,0 +1,210 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Nut, SearchCheck, ShieldCheck } from "@lucide/astro";
+import StarBadge from "../components/common/StarBadge.astro";
+import Nosotros1 from "../assets/about/nosotros-1.png";
+import Nosotros2 from "../assets/about/nosotros-2.png";
+import AnimatedText from "../components/common/AnimatedText.astro";
+---
+
+<Layout>
+    <main class="w-full min-h-screen bg-background">
+        <section class="bg-primary pt-12 pb-18 md:pt-20 md:pb-20">
+            <div
+                class="w-full max-w-300 mx-auto text-background px-4 sm:px-6 lg:px-8 xl:px-0"
+            >
+                <AnimatedText
+                    as="h1"
+                    duration={1.8}
+                    class="font-black text-5xl lg:text-6xl font-title"
+                >
+                    Sobre Nosotros
+                </AnimatedText>
+                <AnimatedText
+                    duration={2}
+                    class="mt-4 md:mt-6 text-lg lg:text-xl font-normal max-w-200 text-balance"
+                >
+                    Impulsando la industria de frutos secos en Perú a través de
+                    calidad premium, innovación y compromiso con la excelencia
+                    alimentaria.
+                </AnimatedText>
+            </div>
+        </section>
+        <section class="w-full py-16 md:py-30">
+            <div
+                class="w-full max-w-300 mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 flex flex-col lg:flex-row justify-between gap-8 lg:gap-4"
+            >
+                <div class="w-full lg:max-w-137.5">
+                    <h2 class="text-4xl lg:text-5xl font-black font-title">
+                        Quiénes Somos
+                    </h2>
+                    <p class="mt-6 md:mt-10 text-lg lg:text-xl text-balance">
+                        Nuts Peru, fundada en 2009, cuenta con más de 16 años de
+                        experiencia en el mercado. Somos una empresa peruana
+                        especializada en la producción y comercialización de
+                        frutos secos, granolas, semillas y especias de alta
+                        calidad, cumpliendo estrictamente con los estándares de
+                        calidad e inocuidad alimentaria.
+
+                        <br class="mb-4" />
+
+                        Nuestro compromiso se basa en ofrecer productos
+                        confiables, respaldados por procesos certificados y un
+                        equipo enfocado en la excelencia y la seguridad del
+                        consumidor.
+                    </p>
+                </div>
+                <div class="w-full lg:max-w-137.5 rounded-2xl shadow-md">
+                    <img
+                        src={Nosotros2.src}
+                        alt="about"
+                        class="w-full rounded-2xl"
+                    />
+                </div>
+            </div>
+        </section>
+        <section class="w-full bg-primary-muted py-16 md:py-30">
+            <div
+                class="w-full max-w-300 mx-auto lg:px-8 xl:px-0 grid grid-cols-1 md:grid-cols-2 shadow-md"
+            >
+                <div class="bg-secondary p-8 md:p-12 lg:p-20">
+                    <h3 class="font-title font-black text-3xl">
+                        Nuestra Misión
+                    </h3>
+                    <p class="mt-4 text-lg lg:text-xl font-normal">
+                        Estamos enfocados en mejorar la calidad de vida de las
+                        personas a través de una alimentación saludable
+                        utilizando productos de óptima calidad.
+                    </p>
+                </div>
+                <div class="bg-background p-8 md:p-12 lg:p-20">
+                    <h3 class="font-title font-black text-3xl">
+                        Nuestra Visión
+                    </h3>
+                    <p class="mt-4 text-lg lg:text-xl font-normal">
+                        Ser líderes en el mercado a nivel nacional, así mismo,
+                        desarrollar una relación fiel con nuestros consumidores;
+                        fomentar el respeto y el compromiso con nuestros
+                        clientes y proveedores.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="w-full bg-background py-16 md:py-30">
+            <div
+                class="w-full max-w-300 mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 flex flex-col items-center"
+            >
+                <h2
+                    class="text-3xl md:text-4xl lg:text-5xl font-black font-title text-center"
+                >
+                    Nuestros Valores
+                </h2>
+                <p
+                    class="mt-6 md:mt-10 text-base md:text-lg lg:text-xl font-normal text-center"
+                >
+                    En Nuts Perú nuestras relaciones se ven guiadas por nuestros
+                    valores.
+                </p>
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full mt-10"
+                >
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="relative flex items-center justify-center p-6 mb-5"
+                        >
+                            <StarBadge
+                                class="w-full h-full absolute inset-0 text-secondary"
+                            />
+                            <ShieldCheck class="size-15 z-10" />
+                        </div>
+                        <h3 class="font-title font-bold text-xl md:text-2xl">
+                            Confianza
+                        </h3>
+                        <p
+                            class="mt-4 text-base md:text-lg font-normal text-center"
+                        >
+                            Construimos relaciones sólidas cumpliendo
+                            estrictamente con los estándares de inocuidad en
+                            cada lote entregado.
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="relative flex items-center justify-center p-6 mb-5"
+                        >
+                            <StarBadge
+                                class="w-full h-full absolute inset-0 text-secondary"
+                            />
+                            <SearchCheck class="size-15 z-10" />
+                        </div>
+                        <h3 class="font-title font-bold text-xl md:text-2xl">
+                            Transparencia
+                        </h3>
+                        <p
+                            class="mt-4 text-base md:text-lg font-normal text-center"
+                        >
+                            Mantenemos una comunicación abierta sobre el origen
+                            de nuestros insumos y la trazabilidad de todos
+                            nuestros procesos.
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center sm:col-span-2 lg:col-span-1"
+                    >
+                        <div
+                            class="relative flex items-center justify-center p-6 mb-5"
+                        >
+                            <StarBadge
+                                class="w-full h-full absolute inset-0 text-secondary"
+                            />
+                            <Nut class="size-15 z-10" />
+                        </div>
+                        <h3 class="font-title font-bold text-xl md:text-2xl">
+                            Compromiso
+                        </h3>
+                        <p
+                            class="mt-4 text-base md:text-lg font-normal text-center"
+                        >
+                            Nos dedicamos a superar los estándares alimentarios
+                            para entregar alimentos seguros que promuevan una
+                            vida saludable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full bg-primary-muted py-16 md:py-30">
+            <div
+                class="w-full max-w-300 mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 flex flex-col-reverse lg:flex-row justify-between gap-8 lg:gap-4"
+            >
+                <div
+                    class="w-full lg:max-w-137.5 rounded-2xl shadow-md overflow-hidden max-h-96"
+                >
+                    <img
+                        src={Nosotros1.src}
+                        alt="about"
+                        class="h-full w-full rounded-2xl object-cover"
+                    />
+                </div>
+                <div class="w-full lg:max-w-137.5">
+                    <h2 class="text-4xl lg:text-5xl font-black font-title">
+                        Por qué elegirnos
+                    </h2>
+                    <p class="mt-6 md:mt-10 text-lg lg:text-xl">
+                        Con 16 años de experiencia, NUTS PERU es proveedor
+                        confiable de frutos secos de calidad premium. Cada
+                        producto se tuesta en pequeños lotes para garantizar
+                        frescura.
+
+                        <br class="mb-4" />
+
+                        Certificados por DIGESA con rigurosos controles de
+                        inocuidad, entregamos productos seguros que superan
+                        estándares del mercado, respaldando la salud de tus
+                        consumidores.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

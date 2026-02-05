@@ -34,7 +34,7 @@ const { tableImageUrl, macroImages } = Astro.props;
             <AnimatedText
                 as="h1"
                 duration={1.8}
-                class="text-[2.55rem] lg:text-6xl xl:text-[4.5rem] font-black leading-[1.1] font-title"
+                class="text-[2.45rem] [@media(min-width:405px)_and_(max-width:720px)]:text-[2.8rem] lg:text-6xl xl:text-[4.5rem] font-black leading-[1.1] font-title"
             >
                 Recien Tostados,
                 <br />
@@ -42,8 +42,10 @@ const { tableImageUrl, macroImages } = Astro.props;
                 <br />
                 Seleccionados.
             </AnimatedText>
-            <AnimatedText duration={2} class="text-base md:text-xl font-medium">
-                Frutos secos, semillas y snacks al por mayor <br /> en todo el Perú.
+            <AnimatedText duration={2} class="text-lg lg:text-xl font-medium">
+                Frutos secos, semillas y snacks al por mayor <br
+                    class="hidden md:block"
+                /> en todo el Perú.
             </AnimatedText>
             <div class="pt-4">
                 <Button size="lg" class="py-2!">

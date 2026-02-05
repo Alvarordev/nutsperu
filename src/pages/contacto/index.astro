@@ -4,6 +4,7 @@ import { Mail, Phone, Clock } from "@lucide/astro";
 import StarBadge from "../../components/common/StarBadge.astro";
 import FloatingWhatsApp from "../../components/common/FloatingWhatsApp.astro";
 import AnimatedText from "../../components/common/AnimatedText.astro";
+import Button from "../../components/common/Button.astro";
 
 const contactInfo = [
     {
@@ -41,13 +42,13 @@ const contactInfo = [
                 <AnimatedText
                     as="h1"
                     duration={1.8}
-                    class="font-black text-3xl md:text-4xl lg:text-5xl font-title"
+                    class="font-black text-5xl lg:text-6xl font-title"
                 >
                     Contáctanos
                 </AnimatedText>
                 <AnimatedText
                     duration={2}
-                    class="mt-4 md:mt-6 text-base md:text-lg lg:text-xl font-normal max-w-200 text-balance"
+                    class="mt-4 md:mt-6 text-lg lg:text-xl font-normal max-w-200 text-balance"
                 >
                     Estamos aquí para atenderte. Contáctanos para consultas,
                     cotizaciones o para conocer más sobre nuestros productos de
@@ -59,12 +60,10 @@ const contactInfo = [
         <section class="w-full py-16 md:py-30">
             <div class="w-full max-w-300 mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
                 <div class="text-center mb-12 md:mb-16">
-                    <h2
-                        class="text-3xl md:text-4xl lg:text-5xl font-black font-title"
-                    >
+                    <h2 class="text-4xl lg:text-5xl font-black font-title">
                         Información de Contacto
                     </h2>
-                    <p class="mt-4 text-base md:text-lg lg:text-xl">
+                    <p class="mt-4 text-lg lg:text-xl">
                         Elige el medio que prefieras para comunicarte con
                         nosotros
                     </p>
@@ -108,12 +107,10 @@ const contactInfo = [
         <section class="w-full bg-primary-muted py-16 md:py-30">
             <div class="w-full max-w-300 mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
                 <div class="text-center mb-12 md:mb-16">
-                    <h2
-                        class="text-3xl md:text-4xl lg:text-5xl font-black font-title"
-                    >
+                    <h2 class="text-4xl lg:text-5xl font-black font-title">
                         Envíanos un Mensaje
                     </h2>
-                    <p class="mt-4 lg:mt-10 text-base md:text-lg lg:text-xl">
+                    <p class="mt-4 lg:mt-10 text-lg lg:text-xl">
                         ¿Tienes alguna pregunta sobre nuestros productos o
                         servicios? Completa el formulario y nos pondremos en
                         contacto contigo lo antes posible.
@@ -265,13 +262,14 @@ const contactInfo = [
                                         placeholder="Escribe tu mensaje aquí..."
                                     ></textarea>
                                 </div>
-
-                                <button
-                                    type="submit"
-                                    class="w-full bg-primary text-background font-bold py-4 px-6 rounded-lg hover:bg-secondary transition-colors duration-300"
-                                >
-                                    Enviar Mensaje
-                                </button>
+                                <div class="w-full">
+                                    <Button
+                                        type="submit"
+                                        class="w-full font-bold!"
+                                    >
+                                        Enviar Mensaje
+                                    </Button>
+                                </div>
                             </form>
                         </div>
                     </div>

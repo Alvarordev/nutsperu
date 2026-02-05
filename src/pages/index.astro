@@ -13,7 +13,7 @@ import nuezNogalGemini from "../assets/macro-fotos/nuez-nogal-gemini.png";
 import pistachoGemini from "../assets/macro-fotos/pistacho-gemini.png";
 import AboutSection from "../components/landing/AboutSection.astro";
 import FloatingWhatsApp from "../components/common/FloatingWhatsApp.astro";
-import Video from "../assets/videofile.mp4";
+import Video from "../assets/video-final.webm";
 ---
 
 <Layout title="Nuts Peru">
@@ -32,11 +32,13 @@ import Video from "../assets/videofile.mp4";
         />
 
         <AboutSection />
-        <section class="w-full">
+        <section
+            class="w-full py-5 bg-background overflow-hidden flex justify-center"
+        >
             <video
                 src={Video}
                 id="video"
-                class="project-video w-full max-h-150 object-cover"
+                class="project-video scale-150 md:w-full md:scale-100 object-cover"
                 autoplay
                 muted
                 loop
