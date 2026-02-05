@@ -38,6 +38,20 @@ const buttonSizes = {
 export function ProductDisplay({ product }: ProductDisplayProps) {
   const [selectedImageId, setSelectedImageId] = useState<string | null>(null);
 
+  const getWhatsAppLink = () => {
+    const phoneNumber = "51908851530";
+    const currentPresentation = product.presentations.find(
+      (p) => p.id === selectedImageId
+    );
+    const presentationText = currentPresentation 
+      ? ` en presentación ${currentPresentation.label.toLowerCase()}`
+      : "";
+    
+    const message = `Hola, buen día. Quisiera solicitar una cotización para ${product.name}${presentationText}. Me gustaría conocer precios, cantidades mínimas de pedido y tiempos de entrega. Quedo atento a su respuesta. Gracias.`;
+    
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  };
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const imageParam = params.get("image");
@@ -181,7 +195,9 @@ export function ProductDisplay({ product }: ProductDisplayProps) {
 
           <div className="flex w-full mt-10">
             <a
-              href="#"
+              href={getWhatsAppLink()}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`${buttonBaseStyles} ${buttonVariants.primary} ${buttonSizes.lg} py-2!  w-full md:w-auto`}
             >
               Cotiza tu pedido

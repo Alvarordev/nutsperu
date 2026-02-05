@@ -22,7 +22,7 @@ export default function ProductGrid({ products }: ProductGridProps) {
           href={`/productos/${product.slug}`}
           className="flex flex-col group cursor-pointer border-2 rounded-lg transition-transform duration-300 hover:scale-105"
         >
-          <div className="bg-primary-muted p-4 aspect-square rounded-lg w-full mb-2">
+          <div className="bg-primary-muted p-8 md:p-4 aspect-square rounded-lg w-full mb-2">
             <img
               src={product.images[0].src}
               alt={product.name}
