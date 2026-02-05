@@ -388,8 +388,8 @@ export const products = [
     category: "confitado",
     description:
       "Nuestro coco rallado es de alta calidad, ideal para realzar el sabor y la textura de una variedad de platillos en la cocina diaria.",
-    images: [{ id: "cenital", src: CocoCenital.src }, { id: "rallado", src: CocoRallado.src }, { id: "molido", src: CocoMolido.src }],
-    presentations: [{ label: "Rallado Largo", id: "rallado" }, { label: "Molido", id: "molido" }],
+    images: [{ id: "cenital", src: CocoCenital.src }, { id: "rallado", src: CocoRallado.src }, { id: "fino", src: CocoMolido.src }],
+    presentations: [{ label: "Rallado Largo", id: "rallado" }, { label: "Fino", id: "fino" }],
   },
   {
     name: "Higos Deshidratados",
