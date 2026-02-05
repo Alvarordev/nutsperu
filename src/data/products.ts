@@ -75,6 +75,7 @@ import CanelaMolida from "../assets/productos/canela/canela-molida.webp";
 import AvellanasEmpaque from "../assets/productos/avellanas/avellanas-empaque.webp";
 import AvellanasEntero from "../assets/productos/avellanas/avellanas-entero.webp";
 import CocoRallado from "../assets/productos/coco/coco-rallado.webp";
+import CocoMolido from "../assets/productos/coco/coco-molido.webp";
 
 export const products = [
   {
@@ -387,8 +388,8 @@ export const products = [
     category: "confitado",
     description:
       "Nuestro coco rallado es de alta calidad, ideal para realzar el sabor y la textura de una variedad de platillos en la cocina diaria.",
-    images: [{ id: "cenital", src: CocoCenital.src }, { id: "rallado", src: CocoRallado.src }],
-    presentations: [{ label: "Rallado", id: "rallado" }],
+    images: [{ id: "cenital", src: CocoCenital.src }, { id: "rallado", src: CocoRallado.src }, { id: "molido", src: CocoMolido.src }],
+    presentations: [{ label: "Rallado", id: "rallado" }, { label: "Molido", id: "molido" }],
   },
   {
     name: "Higos",
