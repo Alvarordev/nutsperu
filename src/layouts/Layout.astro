@@ -4,67 +4,84 @@ import Header from "../components/common/Header.astro";
 import Footer from "../components/common/Footer.astro";
 
 interface Props {
-  title?: string;
+    title?: string;
+    description?: string;
+    keywords?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, keywords } = Astro.props;
 
-const defaultTitle =
-  "Nuts Peru - Frutos Secos y Snacks Saludables al por Mayor";
-const siteDescription =
-  "Descubre Nuts Peru, tu proveedor confiable de frutos secos y snacks saludables al por mayor. Calidad y frescura garantizadas para tu negocio.";
-const siteTitle = title ? title : defaultTitle;
-const ogImageURL = new URL("/og-logo.png", Astro.site || Astro.url);
+const defaultTitle = "Nuts Peru - Frutos Secos y Snacks Saludables";
+const defaultDescription =
+    "Proveedor de frutos secos, nueces, semillas y snacks saludables al por mayor en Perú. Calidad premium, abastecimiento continuo y precios competitivos para tu negocio.";
+const defaultKeywords =
+    "frutos secos peru, nuts peru, nueces, almendras, mani tostado, pistachos, pecanas, castañas, nueces de brasil, semillas, snacks saludables, frutos deshidratados, pasas, aguaymanto, guindones, arandanos, higos secos, semillas de chia, linaza, girasol, ajonjoli, frutos secos al por mayor, nueces mayorista, distribuidor frutos secos, proveedor frutos secos, venta mayorista, B2B frutos secos, almendras por mayor, mani al por mayor, insumos industria alimentaria, frutos secos naturales, frutos secos tostados, snacks naturales, frutos secos organicos, nueces peruanas, almendras peruanas";
+
+const siteTitle = title ? `${title} | Nuts Peru` : defaultTitle;
+const siteDescription = description || defaultDescription;
+const siteKeywords = keywords || defaultKeywords;
 ---
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/favicon.ico" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{siteTitle}</title>
-    <meta name="description" content={siteDescription} />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{siteTitle}</title>
+        <meta name="description" content={siteDescription} />
+        <meta name="keywords" content={siteKeywords} />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-      rel="stylesheet"
-    />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={siteTitle} />
+        <meta property="og:description" content={siteDescription} />
+        <meta property="og:locale" content="es_PE" />
 
-    <link
-      rel="canonical"
-      href={new URL(Astro.url.pathname, Astro.site || Astro.url)}
-    />
-    <meta name="robots" content="index, follow" />
-  </head>
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta property="twitter:title" content={siteTitle} />
+        <meta property="twitter:description" content={siteDescription} />
 
-  <body>
-    <Header />
-    <slot />
-    <Footer />
-  </body>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            rel="canonical"
+            href={new URL(Astro.url.pathname, Astro.site || Astro.url)}
+        />
+        <meta name="robots" content="index, follow" />
+    </head>
+
+    <body>
+        <Header />
+        <slot />
+        <Footer />
+    </body>
 </html>
 
 <style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-  }
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+    }
 </style>
 <script>
-  import Lenis from "lenis";
+    import Lenis from "lenis";
 
-  const lenis = new Lenis();
+    const lenis = new Lenis();
 
-  function raf(time: number): void {
-    lenis.raf(time);
+    function raf(time: number): void {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
     requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
 </script>
